@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "12.0.1",
+      "sem_ver" : "12.0.2",
       "build_uid" : "7432d743-1b62-4c8d-861c-2870b65a2e24",
-      "MD5-CAM-1.0.1" : "277da8f2dca397dc66bdb440874656dd",
+      "MD5-CAM-1.0.1" : "90a7d0b634db83ae30c9e8485a2248e8",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -2015,7 +2015,7 @@
             "code" : "at0002.1",
             "text" : "Navn på studie",
             "description" : "Navnet på studien.",
-            "comment" : "Designkommentar:\nBruker et lokalt kodeverk som ligger i DIPS. Dette må oppdateres lokalt. Dette er det opp til klinikere å melde inn studier, samt at vi henter studier fra helsenorge.no. https://www.helsenorge.no/kliniske-studier/\n"
+            "comment" : "Designkommentar:\nBruker et lokalt kodeverk - terminology:ONCOLOGY-CLINICAL-STUDIES - som ligger i DIPS. Dette må oppdateres lokalt. Dette er det opp til klinikere å melde inn studier, samt at vi henter studier fra helsenorge.no. https://www.helsenorge.no/kliniske-studier/\n"
           },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
@@ -2040,7 +2040,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0008.1",
             "text" : "Kommentar",
-            "description" : "Ytterligere informasjon om s, som ikke kan registreres i andre felter."
+            "description" : "Ytterligere informasjon om studiet, som ikke kan registreres i andre felter.",
+            "comment" : "Designkommentar:\nKommentar på studiet."
           }
         },
         "es-ar" : {
@@ -3739,7 +3740,7 @@
             "code" : "at0001.1",
             "text" : "Navn",
             "description" : "Ustrukturert navn for personen.",
-            "comment" : "D"
+            "comment" : "Designkommentar:\nnavn på person som er ansvarlig for studien."
           }
         },
         "de" : { },
