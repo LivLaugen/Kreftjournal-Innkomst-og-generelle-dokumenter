@@ -1,0 +1,104 @@
+archetype (adl_version=1.4; uid=f22da38c-fd32-38e7-8793-caf3ee38886f)
+	openEHR-EHR-EVALUATION.substance_use_summary_dips.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2023-01-25">
+		["name"] = <"Runar Kristiansen">
+		["organisation"] = <"DIPS AS">
+		["email"] = <"rkr@dips.no">
+	>
+	lifecycle_state = <"0">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Sammendrag eller vedvarende informasjon om bruk av avhengighetsskapende, eller potensielt avhengighetsskapende, stoff av en person.">
+			misuse = <"Skal ikke brukes til å registrere informasjon om tobakksbruk - bruk EVALUATION.tobacco_smoking_summary eller EVALUATION.smokeless_tobacco_summary til dette formålet.
+
+Skal ikke brukes til å registrere informasjon om alkoholbruk - bruk EVALUATION.alcohol_use_summary til dette formålet.
+
+Skal ikke brukes til å registrere hendelses- eller periodebasert informasjon om stoffbruk, for eksempel faktisk daglig bruk eller gjennomsnittlig bruk over en spesifisert tidsperiode – bruk arketypen OBSERVATION.substance_use.">
+		>
+	>
+	other_details = <
+		["MD5-CAM-1.0.1"] = <"EF03778E1BA8B7F36C24F59B24506186">
+		["build_uid"] = <"35da4a2b-52fb-36f4-b79c-f941dc2b8992">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- Substance use summary
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Stoffnavn
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Generell status
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0004,    -- Aldri brukt
+									at0005,    -- Bruker
+									at0006]    -- Tidligere bruker
+								}
+							}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Overordnet beskrivelse
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Substance use summary">
+					description = <"unknown">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Stoffnavn">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Generell status">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Aldri brukt">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Bruker">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"Tidligere bruker">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Overordnet beskrivelse">
+					description = <"">
+				>
+			>
+		>
+	>
