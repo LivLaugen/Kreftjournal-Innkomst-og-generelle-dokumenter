@@ -1,0 +1,109 @@
+= Oncology-Administrative-Information
+
+
+== Metadata
+
+
+TemplateId:: Oncology-Important-Information_v7
+
+
+Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
+
+
+
+
+:toc:
+
+
+
+
+// Not supported rmType COMPOSITION
+== EVENT_CONTEXT
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*EVENT_CONTEXT* + 
+EVENT_CONTEXT: __
+5+a|*Template versjonsinformasjon* + 
+CLUSTER: _openEHR-EHR-CLUSTER.template_semver_dips.v1_
+|at0001| 0..1| DV_CODED_TEXT | Navn
+a|
+* Onkologi administrativ informasjon (no.dips.oncology: TM8)
+5+a|*Semver* + 
+CLUSTER: _at0003_
+|at0004| 0..1| DV_COUNT | Major
+|
+|at0005| 0..1| DV_COUNT | Minor
+|
+|at0006| 0..1| DV_COUNT | Patch
+|
+|====
+== Administrasjon
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Administrasjon* + 
+EVALUATION: _openEHR-EHR-EVALUATION.trajectory_summary_dips.v1_
+|at0003| 0..1| DV_TEXT | Praktisk informasjon
+a|
+|at0011| 0..*| DV_TEXT | Pasientansvarlig lege
+a|
+|at0006| 0..1| DV_DATE_TIME | Sist endret
+|
+|====
+== Samtykke informasjon gitt og studier
+== Reservasjon til Norsk proton og stråleterapiregister
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Reservasjon til Norsk proton og stråleterapiregister* + 
+ACTION: _openEHR-EHR-ACTION.informed_consent_dips.v1_
+|at0002| 1..*| DV_CODED_TEXT | Prosedyre/utprøving/aktivitet
+a|
+* Informert pasienten om reservasjonsrett til Norsk proton- og stråleterapiregister (medisinsk kvalitetsregister) (OncologyConsents: 01)
+
+
+Designkommentar:
+Dette som vises i skjermbildet og man skal hake av for:
+"Informert pasienten om reservasjonsrett til Norsk proton- og stråleterapiregister (medisinsk kvalitetsregister)"
+|====
+== Forholdsregel
+[options="header", cols="3,3,5,5,30"]
+|====
+|NodeId|Attr.|RM Type| Name |Description
+5+a|*Forholdsregel* + 
+EVALUATION: _openEHR-EHR-EVALUATION.precaution.v1_
+|at0002| 1..1| DV_CODED_TEXT | Navn på studie
+a|
+
+
+Designkommentar:
+Bruker et lokalt kodeverk som ligger i DIPS. Dette må oppdateres lokalt. Dette er det opp til klinikere å melde inn studier, samt at vi henter studier fra helsenorge.no. https://www.helsenorge.no/kliniske-studier/
+
+|at0014| 0..1| DV_CODED_TEXT | Status
+a|
+* at0015 -> Aktiv 
+
+
+Designkommentar:
+Denne blir satt til aktiv hvis studet blir valgt.
+Skjules i skjermbildet.
+|at0008| 0..1| DV_TEXT | Kommentar
+a|
+
+
+Designkommentar:
+Kommentar på studiet.
+5+a|*Person* + 
+CLUSTER: _openEHR-EHR-CLUSTER.person.v1_
+|at0001| 0..1| DV_TEXT | Navn
+a|
+
+
+D
+|at0004| 0..1| DV_DATE_TIME | Sist oppdatert
+|
+|====
+// Not supported rmType CODE_PHRASE
+// Not supported rmType CODE_PHRASE
+// Not supported rmType PARTY_PROXY
