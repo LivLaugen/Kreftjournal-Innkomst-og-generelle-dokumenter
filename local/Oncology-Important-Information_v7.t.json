@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "12.0.0",
+      "sem_ver" : "12.0.1",
       "build_uid" : "7432d743-1b62-4c8d-861c-2870b65a2e24",
-      "MD5-CAM-1.0.1" : "227d1b10f19168015eb3fcc1446ab1b9",
+      "MD5-CAM-1.0.1" : "277da8f2dca397dc66bdb440874656dd",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -1675,7 +1675,7 @@
             "code" : "at0002",
             "text" : "Prosedyre/utprøving/aktivitet",
             "description" : "Prosedyre, klinisk utprøving eller helserelatert aktivitet (inkludert riktig side/riktig sted, hvor aktuelt) som samtykkestatus og detaljene registreres for.",
-            "comment" : "Designkommentar:\nDette som vises i skjermbildet:\n\"Informert pasienten om reservasjonsrett til Norsk proton- og stråleterapiregister (medisinsk kvalitetsregister)\""
+            "comment" : "Designkommentar:\nDette som vises i skjermbildet og man skal hake av for:\n\"Informert pasienten om reservasjonsrett til Norsk proton- og stråleterapiregister (medisinsk kvalitetsregister)\""
           },
           "at0014.1" : {
             "@type" : "ARCHETYPE_TERM",
