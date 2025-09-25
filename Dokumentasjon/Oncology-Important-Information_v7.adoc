@@ -1,4 +1,5 @@
 :toc:
+
 = Oncology-Administrative-Information
 
 
@@ -9,12 +10,6 @@ TemplateId:: Oncology-Important-Information_v7
 
 
 Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
-
-
-
-
-
-
 
 
 
@@ -79,7 +74,7 @@ a|
 
 
 Designkommentar:
-Bruker et lokalt kodeverk som ligger i DIPS. Dette må oppdateres lokalt. Dette er det opp til klinikere å melde inn studier, samt at vi henter studier fra helsenorge.no. https://www.helsenorge.no/kliniske-studier/
+Bruker et lokalt kodeverk - terminology: ONCOLOGY-CLINICAL-STUDIES - som ligger i DIPS. Dette må oppdateres lokalt. Dette er det opp til klinikere å melde inn studier, samt at vi henter studier fra helsenorge.no. https://www.helsenorge.no/kliniske-studier/
 
 |at0014| 0..1| DV_CODED_TEXT | Status
 a|
@@ -101,11 +96,11 @@ CLUSTER: _openEHR-EHR-CLUSTER.person.v1_
 a|
 
 
-D
+Designkommentar:
+navn på person som er ansvarlig for studien.
 |at0004| 0..1| DV_DATE_TIME | Sist oppdatert
 |
 |====
 // Not supported rmType CODE_PHRASE
 // Not supported rmType CODE_PHRASE
-
 // Not supported rmType PARTY_PROXY
