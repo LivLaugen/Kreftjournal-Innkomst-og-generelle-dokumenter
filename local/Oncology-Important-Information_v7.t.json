@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "12.0.2",
+      "sem_ver" : "12.0.3",
       "build_uid" : "7432d743-1b62-4c8d-861c-2870b65a2e24",
-      "MD5-CAM-1.0.1" : "90a7d0b634db83ae30c9e8485a2248e8",
+      "MD5-CAM-1.0.1" : "7c8e85a6e7c6d22dafd8a35b013d69b8",
       "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
@@ -2015,7 +2015,7 @@
             "code" : "at0002.1",
             "text" : "Navn på studie",
             "description" : "Navnet på studien.",
-            "comment" : "Designkommentar:\nBruker et lokalt kodeverk - terminology:ONCOLOGY-CLINICAL-STUDIES - som ligger i DIPS. Dette må oppdateres lokalt. Dette er det opp til klinikere å melde inn studier, samt at vi henter studier fra helsenorge.no. https://www.helsenorge.no/kliniske-studier/\n"
+            "comment" : "Designkommentar:\nBruker et lokalt kodeverk - terminology: ONCOLOGY-CLINICAL-STUDIES - som ligger i DIPS. Dette må oppdateres lokalt. Dette er det opp til klinikere å melde inn studier, samt at vi henter studier fra helsenorge.no. https://www.helsenorge.no/kliniske-studier/\n"
           },
           "at0008" : {
             "@type" : "ARCHETYPE_TERM",
