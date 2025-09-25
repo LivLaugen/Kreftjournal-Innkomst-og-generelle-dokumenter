@@ -1,3 +1,4 @@
+:toc:
 = Oncology-Administrative-Information
 
 
@@ -12,7 +13,7 @@ Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
 
 
 
-:toc:
+
 
 
 
@@ -106,4 +107,5 @@ D
 |====
 // Not supported rmType CODE_PHRASE
 // Not supported rmType CODE_PHRASE
+
 // Not supported rmType PARTY_PROXY
