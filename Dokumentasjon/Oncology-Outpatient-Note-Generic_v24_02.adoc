@@ -1,4 +1,6 @@
-= Klinisk kontakt
+:toc:
+
+= Poliklinisk notat (Klinisk kontakt) 
 
 
 == Metadata
@@ -8,11 +10,6 @@ TemplateId:: Oncology-Outpatient-Note-Generic_v24_02
 
 
 Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
-
-
-
-
-:toc:
 
 
 
@@ -39,7 +36,7 @@ CLUSTER: _openEHR-EHR-CLUSTER.oncology_aql_support_dips.v1_
 a|
 |====
 == Historiske data
-== Historiske data
+=== Historiske data
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -54,7 +51,7 @@ a|
 * Historiske data (no.dips.Freetext.Classification: OnkologiPoliklinikkHistoriskeData)
 |====
 == Aktuelt
-== Aktuelt
+=== Aktuelt
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -69,8 +66,8 @@ a|
 * Aktuelt (no.dips.Freetext.Classification: OnkologiPoliklinikkAktuelt)
 |====
 == Status presens
-== Vitalia
-== Kroppsmasseindeks
+=== Vitalia
+=== Kroppsmasseindeks
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -82,7 +79,7 @@ OBSERVATION: _openEHR-EHR-OBSERVATION.body_mass_index.v2_
 a|
 * at0007 -> Automatisk registrering 
 |====
-== Høyde/Lengde
+=== Høyde/Lengde
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -98,7 +95,7 @@ a|
 * at0016 -> Stående 
 * at0020 -> Liggende 
 |====
-== Kroppsvekt
+=== Kroppsvekt
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -114,7 +111,7 @@ a|
 * at0028 -> Fullt påkledt, uten sko 
 * at0010 -> Fullt påkledt inklusive sko 
 |====
-== Kroppstemperatur
+=== Kroppstemperatur
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -138,7 +135,7 @@ a|
 * at0055 -> Lyske 
 * at0060 -> Tinning 
 |====
-== Pulsoksymetri
+=== Pulsoksymetri
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -146,7 +143,7 @@ a|
 OBSERVATION: _openEHR-EHR-OBSERVATION.pulse_oximetry.v1_
 // Not supported rmType DV_PROPORTION
 |====
-== Puls/Hjertefrekvens
+=== Puls/Hjertefrekvens
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -162,7 +159,7 @@ a|
 * at0006 -> Regelmessig 
 * at1028 -> Uregelmessig 
 |====
-== Blodtrykk
+=== Blodtrykk
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -187,7 +184,7 @@ a|
 |at1038| 0..1| DV_TEXT | Formel for beregning av MAP
 a|
 |====
-== Åndedrett
+=== Åndedrett
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -209,7 +206,7 @@ a|
 |undefined| 1..1| DV_DATE_TIME | Time
 |
 |====
-== Kroppsoverflate
+=== Kroppsoverflate
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -364,7 +361,7 @@ a|
 * Resyme for supplerende undersøkelser (no.dips.Freetext.Classification: OnkologiPoliklinikkResymeForSupplerendeUndersokelser)
 |====
 == Bivirkningsregistrering
-== Bivirkninger av behandling
+=== Bivirkninger av behandling
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -405,7 +402,7 @@ a|
 * at0024 -> Nei 
 * at0045 -> Usikker 
 |====
-== Problem/diagnose
+=== Problem/diagnose
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -482,7 +479,7 @@ For eksempel: Smerte kan beskrives som "gnagende", "brennende" eller "som et ele
 |
 |====
 == Sykdomsutvikling (tumor event)
-== Kartlegging av Sykdomsutvikling (tumor event)
+=== Kartlegging av Sykdomsutvikling (tumor event)
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -517,7 +514,7 @@ CLUSTER: _openEHR-EHR-CLUSTER.tumor_hendelse_dips.v1_
 Designkommentar:
 Dato for forrige sykdomsutvikling, hentet fra elementet "Hendelsestidspunkt" i det siste polikliniske notat hvor det er svart ja på spørsmålet om det er noen sykdomsutvikling.
 |====
-== Problem/diagnose
+=== Problem/diagnose
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -656,4 +653,5 @@ a|
 |====
 // Not supported rmType CODE_PHRASE
 // Not supported rmType CODE_PHRASE
+
 // Not supported rmType PARTY_PROXY
