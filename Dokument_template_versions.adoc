@@ -1,6 +1,6 @@
 = Dokumenter – templatversjoner i SJK
 
-Oversikt over dokumentmaler i produksjon
+Oversikt over dokumentmaler i produksjon per 27.10.2025
 
 |===
 | **Navn i DIPS Arena** | **Navn på templat** | **Versjon i produksjon**
