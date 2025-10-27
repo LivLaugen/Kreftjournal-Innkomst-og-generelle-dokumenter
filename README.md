@@ -1,0 +1,13 @@
+Dokumenter – templatversjoner i SJK
+
+Tabellen nedenfor viser navnene på dokumenter i DIPS Arena, tilhørende templatnavn og versjoner i produksjon.
+
+| Navn i DIPS Arena | Navn på templat | Versjon i produksjon |
+|-------------------|------------------|------------------------|
+| Sykehistorie (Sykehistorie onk) | Oncology-Disease-History-Generic | 20 |
+| Innkomstjournal post/pol onk | Oncology-General-Reception-Journal | 7 |
+| Administativ informasjon | Oncology-Important-Information | 7 |
+| Poliklinisk notat onk | Oncology-Outpatient-Note-Generic | 24 |
+| Sosialanamnese | Oncology-SocialAnamnesis | 20 |
+| Tidligere sykdommer/Komorbiditet ONK | Oncology-Comorbidity | 20 |
+| Stimulantia | Oncology-Stimulantia | 20 |
