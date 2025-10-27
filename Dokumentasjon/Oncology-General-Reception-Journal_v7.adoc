@@ -1,3 +1,5 @@
+:toc:
+
 = Generell_Innkomst_kreft
 
 
@@ -8,13 +10,6 @@ TemplateId:: Oncology-General-Reception-Journal_v7
 
 
 Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
-
-
-
-
-:toc:
-
-
 
 
 // Not supported rmType COMPOSITION
@@ -433,4 +428,5 @@ a|
 |====
 // Not supported rmType CODE_PHRASE
 // Not supported rmType CODE_PHRASE
+
 // Not supported rmType PARTY_PROXY
