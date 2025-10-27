@@ -4,7 +4,7 @@ Oversikt over dokumentmaler i produksjon per 27.10.2025
 
 |===
 | **Navn i DIPS Arena** | **Navn på templat** | **Versjon i produksjon**
-| Sykehistorie (Sykehistorie onk) | Oncology-Disease-History-Generic | 20
+| Sykehistorie onk | Oncology-Disease-History-Generic | 20
 | Innkomstjournal post/pol onk | Oncology-General-Reception-Journal | 7
 | Administativ informasjon | Oncology-Important-Information | 7
 | Poliklinisk notat onk | Oncology-Outpatient-Note-Generic  | 24
