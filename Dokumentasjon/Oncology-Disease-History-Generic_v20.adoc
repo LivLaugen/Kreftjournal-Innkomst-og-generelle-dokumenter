@@ -1,6 +1,6 @@
 :toc:
 
-= Sammendrag av helseinformasjon
+= Sammendrag av helseinformasjon (Sykehistorie)
 
 
 == Metadata
@@ -212,3 +212,4 @@ a|
 // Not supported rmType CODE_PHRASE
 
 // Not supported rmType PARTY_PROXY
+
