@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "39af3cf4ba64a72abae995c7c99384a8",
-      "PARENT:MD5-CAM-1.0.1" : "808AFCC062571B42A5906F63A364C731"
+      "MD5-CAM-1.0.1" : "69537999fb0748ff25f4f3d3994882b5",
+      "PARENT:MD5-CAM-1.0.1" : "808AFCC062571B42A5906F63A364C731",
+      "sem_ver" : "0.1.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -197,7 +199,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-EVALUATION.problemdiagnose - kreftdiagnose tumorhendelse.v1"
+    "value" : "openEHR-EHR-EVALUATION.problemdiagnose_-_kreftdiagnose_tumorhendelse.v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -599,7 +601,7 @@
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0079.1",
           "text" : "Hendelsestype",
-          "description" : "Spesifikk variant eller subtype av diagnose, hvis det er relevant.",
+          "description" : "Den spesifiserte hendelsestypen for sykdomsutviklingen.",
           "comment" : "Den spesifiserte hendelsestypen for sykdomsutviklingen."
         }
       },
@@ -760,7 +762,7 @@
     }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "0f00a821-c135-3822-9bc0-7a4ac09c59e0",
+  "buildUid" : "c5ef97bb-e402-3f20-8113-b872d837a362",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
