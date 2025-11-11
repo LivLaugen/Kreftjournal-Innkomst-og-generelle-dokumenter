@@ -21,9 +21,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "bc2aa0d6db36c46f347883f2c989eea4",
+      "MD5-CAM-1.0.1" : "95c71fa394eca5ca1a5348c55a149f66",
       "PARENT:MD5-CAM-1.0.1" : "808AFCC062571B42A5906F63A364C731",
-      "sem_ver" : "4.0.0",
+      "sem_ver" : "5.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -600,7 +600,7 @@
         },
         "at0003.1" : {
           "@type" : "ARCHETYPE_TERM",
-          "code" : "at0003",
+          "code" : "at0003.1",
           "text" : "Dato/tid for klinisk bekreftelse",
           "description" : "Anslått eller faktisk dato/tid da diagnosen ble bekreftet: prøvetakningsdato for første positiv histologi/cytologi (evt. mottaksdato så svardato for patologiprøve). Dersom det ikke er tatt vevsprøver, benyttes den dato man ved hjelp av andre undersøkelser (bildediagnostikk, blodprøve etc.) bestemmer seg for at pasienten har kreft.​",
           "comment" : "Delvise datoer er tillatt. Dersom individet er under ett år gammel, må komplett dato eller som et minimum måned og år oppgis for å muliggjøre presise beregninger av alder, f.eks. ved bruk i beslutningsstøttesystemer. Data registrert eller importert som \"alder ved tidspunkt når diagnosen stilles\" bør konverteres til en dato ved hjelp av individets fødselsdato."
@@ -3535,7 +3535,6 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0026.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -3658,6 +3657,13 @@
             "text" : "Beskrivelse av påvisningsmetode",
             "description" : "Fritekstlig beskrivelse av typen undersøkelse eller utredning som er utført for å komme fram til sykdomsutviklingen.",
             "comment" : "Designkommentar;\nFritekstlig beskrivelse av typen undersøkelse eller utredning som er utført for å komme fram til sykdomsutviklingen."
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "Dato/tid for klinisk relevans",
+            "description" : "Dato/tid for sykdomsutviklingen/tumor-eventet.",
+            "comment" : "Designkommentar:\nDato/tid for sykdomsutviklingen/tumor-event/forverringen. Denne kan man hente fra kartleggingsarketypen brukt for å få bekrefte om det skjedd en progresjon (forverring) eller om det er residivert. "
           }
         },
         "de" : {
