@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "afcab54d85032421f2181e19c425f262",
+      "MD5-CAM-1.0.1" : "786dcc04e2999a5faea1ff10c35db523",
       "PARENT:MD5-CAM-1.0.1" : "9D358EB1048EA1401802C3E1FDFB9A29",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -3813,7 +3813,7 @@
           "at0026.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026.1",
-            "text" : "Dato/tid for klinisk relevans",
+            "text" : "Hendelsestidspunkt",
             "description" : "Dato/tid for sykdomsutviklingen/tumor-eventet.",
             "comment" : "Designkommentar:\nDato/tid for sykdomsutviklingen/tumor-event/forverringen. Denne kan man hente fra kartleggingsarketypen brukt for å få bekrefte om det skjedd en progresjon (forverring) eller om det er residivert. "
           }
@@ -4244,8 +4244,18 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0003.1",
-              "attributes" : [ ],
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE_TIME",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
