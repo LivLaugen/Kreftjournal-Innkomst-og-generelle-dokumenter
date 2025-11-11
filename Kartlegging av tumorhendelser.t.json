@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "c2ac08323e12149d902f4ef85fb09781",
-      "PARENT:MD5-CAM-1.0.1" : "942CF0FB3C54F2949348CF29B1DD1E2D"
+      "MD5-CAM-1.0.1" : "24f9d3a346dc90a141276b52e25e514f",
+      "PARENT:MD5-CAM-1.0.1" : "942CF0FB3C54F2949348CF29B1DD1E2D",
+      "sem_ver" : "1.0.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -101,7 +103,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-OBSERVATION.kartleggingav tumorhendelser.v1"
+    "value" : "openEHR-EHR-OBSERVATION.kartleggingav_tumorhendelser.v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -254,8 +256,21 @@
                           "rmAttributeName" : "value",
                           "children" : [ {
                             "@type" : "C_COMPLEX_OBJECT",
-                            "rmTypeName" : "DV_BOOLEAN",
-                            "attributes" : [ ],
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "local"
+                                },
+                                "constraint" : [ "ac0.19" ],
+                                "selectedTerminologies" : [ ]
+                              } ]
+                            } ],
                             "attributeTuples" : [ ]
                           } ]
                         } ],
@@ -276,15 +291,6 @@
                           } ]
                         } ],
                         "attributeTuples" : [ ]
-                      }, {
-                        "@type" : "C_ARCHETYPE_ROOT",
-                        "rmTypeName" : "CLUSTER",
-                        "occurrences" : "0..1",
-                        "nodeId" : "at0039.1",
-                        "attributes" : [ ],
-                        "attributeTuples" : [ ],
-                        "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-tumor_hendelse_dips-001.v1",
-                        "referenceType" : "archetypeOverlay"
                       }, {
                         "@type" : "C_COMPLEX_OBJECT",
                         "rmTypeName" : "ELEMENT",
@@ -339,6 +345,12 @@
           "text" : "(Synthesized)",
           "code" : "ac0.14",
           "description" : ""
+        },
+        "ac0.19" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.19",
+          "description" : ""
         }
       },
       "nb" : {
@@ -387,6 +399,12 @@
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.14",
           "description" : ""
+        },
+        "ac0.19" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.19",
+          "description" : ""
         }
       },
       "de" : {
@@ -415,6 +433,12 @@
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.14",
+          "description" : ""
+        },
+        "ac0.19" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.19",
           "description" : ""
         }
       },
@@ -445,6 +469,12 @@
           "text" : "*(Synthesized) (en)",
           "code" : "ac0.14",
           "description" : ""
+        },
+        "ac0.19" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.19",
+          "description" : ""
         }
       },
       "ca" : {
@@ -453,6 +483,12 @@
           "text" : "(Synthesized)",
           "code" : "ac0.14",
           "description" : ""
+        },
+        "ac0.19" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.19",
+          "description" : ""
         }
       },
       "fr" : {
@@ -460,6 +496,12 @@
           "@type" : "ARCHETYPE_TERM",
           "text" : "(Synthesized)",
           "code" : "ac0.14",
+          "description" : ""
+        },
+        "ac0.19" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.19",
           "description" : ""
         }
       }
@@ -541,140 +583,32 @@
         "@type" : "VALUE_SET",
         "id" : "ac0.16",
         "members" : [ "at0023", "at0024" ]
+      },
+      "ac0.17" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.17",
+        "members" : [ "at0023", "at0024", "at0027", "at0045" ]
+      },
+      "ac0.18" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.18",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.19" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.19",
+        "members" : [ "at0023", "at0024" ]
       }
     }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "ef49c2cc-3519-34ec-9e28-56d6680c5b89",
+  "buildUid" : "de015aaa-8de5-3cf3-bb2d-1ae492a023e4",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
   "templateId" : "Kartlegging av tumorhendelser",
   "otherMetaData" : { },
-  "templateOverlays" : [ {
-    "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "fdeaa69e-fe6e-4c64-acac-7068709564a4",
-    "description" : {
-      "@type" : "RESOURCE_DESCRIPTION",
-      "originalAuthor" : { },
-      "otherContributors" : [ ],
-      "ipAcknowledgements" : { },
-      "references" : { },
-      "conversionDetails" : { },
-      "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "8c97679af88e8f1711add100deb350b4"
-      },
-      "details" : {
-        "nb" : {
-          "@type" : "RESOURCE_DESCRIPTION_ITEM",
-          "language" : {
-            "terminologyId" : {
-              "value" : "ISO_639-1"
-            },
-            "codeString" : "nb"
-          },
-          "purpose" : "Brukes for å definere en tumor hendelse",
-          "keywords" : [ ],
-          "originalResourceUri" : { },
-          "otherDetails" : { }
-        }
-      }
-    },
-    "parentArchetypeId" : "openEHR-EHR-CLUSTER.tumor_hendelse_dips.v1",
-    "differential" : true,
-    "archetypeId" : {
-      "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-CLUSTER.ovl-tumor_hendelse_dips-001.v1"
-    },
-    "definition" : {
-      "@type" : "C_COMPLEX_OBJECT",
-      "rmTypeName" : "CLUSTER",
-      "nodeId" : "at0000.1",
-      "attributes" : [ {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "items",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0001.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0002.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0005.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0006.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0008.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
-          "nodeId" : "at0009.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        } ]
-      } ],
-      "attributeTuples" : [ ]
-    },
-    "terminology" : {
-      "@type" : "ARCHETYPE_TERMINOLOGY",
-      "conceptCode" : "at0000",
-      "termDefinitions" : {
-        "nb" : {
-          "at0009.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009.1",
-            "text" : "Videre plan/behandling",
-            "description" : "Den forrige sykdomsutvikling/tumorhendelse tidspunktet (hentet fra den siste registrerte hendelsestidspunktet)."
-          },
-          "at0008.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0008.1",
-            "text" : "Dato for forrige sykdomsutvikling (tumor event)",
-            "description" : "Dato for forrige sykdomsutvikling, hentet fra elementet \"Hendelsestidspunkt\" i det siste polikliniske notat hvor det er svart ja på spørsmålet om det er noen sykdomsutvikling."
-          }
-        }
-      },
-      "termBindings" : { },
-      "terminologyExtracts" : { },
-      "valueSets" : { }
-    },
-    "adlVersion" : "1.4",
-    "buildUid" : "ec45d768-4807-3348-a83a-a601ffca4ccf",
-    "rmName" : "openehr",
-    "rmRelease" : "1.1.0",
-    "generated" : true,
-    "otherMetaData" : { },
-    "originalLanguage" : {
-      "terminologyId" : {
-        "value" : "ISO_639-1"
-      },
-      "codeString" : "nb"
-    },
-    "translations" : [ ]
-  } ],
+  "templateOverlays" : [ ],
   "originalLanguage" : {
     "terminologyId" : {
       "value" : "ISO_639-1"
