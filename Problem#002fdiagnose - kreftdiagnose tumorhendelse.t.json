@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "69537999fb0748ff25f4f3d3994882b5",
+      "MD5-CAM-1.0.1" : "1fb1e8dd6d3516f5d98c35042e84d2f4",
       "PARENT:MD5-CAM-1.0.1" : "808AFCC062571B42A5906F63A364C731",
-      "sem_ver" : "0.1.1",
+      "sem_ver" : "1.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -240,25 +240,25 @@
                     "rmTypeName" : "TERMINOLOGY_CODE",
                     "occurrences" : "0..1",
                     "terminologyId" : {
-                      "value" : "no.onc.tumorevent.hendelse"
+                      "value" : "SNOMED-CT"
                     },
                     "constraint" : [ ],
-                    "selectedTerminologies" : [ "no.onc.tumorevent.hendelse" ],
+                    "selectedTerminologies" : [ "SNOMED-CT" ],
                     "includedExternalTerminologyCodes" : [ {
-                      "terminologyId" : "no.onc.tumorevent.hendelse",
-                      "code" : "01",
+                      "terminologyId" : "SNOMED-CT",
+                      "code" : "255470001",
                       "value" : "Lokalt"
                     }, {
-                      "terminologyId" : "no.onc.tumorevent.hendelse",
-                      "code" : "02",
+                      "terminologyId" : "SNOMED-CT",
+                      "code" : "410674003",
                       "value" : "Regionalt"
                     }, {
-                      "terminologyId" : "no.onc.tumorevent.hendelse",
-                      "code" : "03",
+                      "terminologyId" : "SNOMED-CT",
+                      "code" : "261007001",
                       "value" : "Metastasert"
                     }, {
-                      "terminologyId" : "no.onc.tumorevent.hendelse",
-                      "code" : "04",
+                      "terminologyId" : "SNOMED-CT",
+                      "code" : "80534008",
                       "value" : "Biokjemisk"
                     } ]
                   } ]
@@ -602,7 +602,7 @@
           "code" : "at0079.1",
           "text" : "Hendelsestype",
           "description" : "Den spesifiserte hendelsestypen for sykdomsutviklingen.",
-          "comment" : "Den spesifiserte hendelsestypen for sykdomsutviklingen."
+          "comment" : "Designkommentar:\nbruker kodeverket \n*255470001  Local (qualifier value) \n*410674003 Regional (qualifier value) \n*261007001 Distant (qualifier value) \n*80534008 Biochemical (qualifier value) "
         }
       },
       "sv" : {
@@ -1095,7 +1095,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.26" ],
+                  "constraint" : [ "ac0.45" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -1123,7 +1123,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.27" ],
+                  "constraint" : [ "ac0.43" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -1376,16 +1376,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1396,16 +1396,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1416,16 +1416,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1441,15 +1441,14 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0102.1",
             "text" : "Progresjon",
-            "description" : "Hvilken sykdomsutvikling (engelsk: tumor-event) i form av residiv eller progresjon er tilstede?",
-            "comment" : "For eksempel status for kreft eller en hematologisk diagnose."
+            "description" : "Er sykdomsutvikling (engelsk: tumor-event) i form av residiv  tilstede?\nProblemet eller diagnosen er i forverring."
           },
           "at0083.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0083.1",
             "text" : "Residiv",
-            "description" : "Fase av bedring eller tilheling for et akutt problem eller diagnose.",
-            "comment" : "For eksempel for å spore tilhelingen av en mellomørebetennelse."
+            "description" : "Er sykdomsutvikling (engelsk: tumor-event) i form av progresjon er tilstede?\nProblemet eller diagnosen har blitt forverret etter en midlertidig forbedret periode.",
+            "comment" : "Problemet eller diagnosen har blitt forverret etter en midlertidig forbedret periode."
           },
           "ac0.25" : {
             "@type" : "ARCHETYPE_TERM",
@@ -1457,16 +1456,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1477,16 +1476,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1497,16 +1496,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1517,16 +1516,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1537,16 +1536,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1557,16 +1556,16 @@
             "code" : "ac0.25",
             "description" : ""
           },
-          "ac0.26" : {
+          "ac0.43" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
+            "code" : "ac0.43",
             "description" : ""
           },
-          "ac0.27" : {
+          "ac0.45" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
+            "code" : "ac0.45",
             "description" : ""
           }
         },
@@ -1575,18 +1574,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.25",
-            "description" : ""
-          },
-          "ac0.26" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.26",
-            "description" : ""
-          },
-          "ac0.27" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.27",
             "description" : ""
           },
           "at0110.1" : {
@@ -1689,6 +1676,18 @@
             "text" : "节段特征",
             "description" : "所确定的问题/诊断的此次发生发展过程（episode，节段/事件）的类别。又可称为“节段特性”、“发生发展特征/特性”或“发作特征/特性”。",
             "comment" : "例如：“新发”将使得临床医生/临床医务人员能够分清可能在某一既往诊断之后不久已经出现的中耳炎（otitis media）的新的急性发作节段/事件/发生发展过程（acute episode），从而将其与慢性中耳炎的未解决或“持续存在之中”的诊断区别开来。某一疾病的复发性、新发性和急性发作节段的治疗可能与“并未在逐渐解决中”或“并无反应”的相同疾病的治疗有着很大不同。在很多情况下，临床医生/临床医务人员会无法做出确切的判断，因此“不明确”可能会是合适的选项。"
+          },
+          "ac0.43" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.43",
+            "description" : ""
+          },
+          "ac0.45" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.45",
+            "description" : ""
           }
         },
         "ca" : {
@@ -1696,18 +1695,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.25",
-            "description" : ""
-          },
-          "ac0.26" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.26",
-            "description" : ""
-          },
-          "ac0.27" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.27",
             "description" : ""
           },
           "at0110.1" : {
@@ -1810,6 +1797,18 @@
             "text" : "Episodicitat",
             "description" : "Categoria d'aquest episodi per al problema/diagnòstic identificat.",
             "comment" : "Per exemple: \"Nou\" permetrà als metges distingir un nou episodi agut d'otitis mitjana que pot haver sorgit poc després d'un diagnòstic anterior, per distingir-lo d'un diagnòstic no resolt o \"Actual\" d'otitis crònica. Tractament d'episodis recurrents, nous i aguts d'una condició pot diferir significativament de la mateixa condició que no està resolent o responent al tractament. En moltes situacions el professional d’atenció sanitària no podrà dir-ho, i per tant la indeterminació pot ser apropiada."
+          },
+          "ac0.43" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.43",
+            "description" : ""
+          },
+          "ac0.45" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.45",
+            "description" : ""
           }
         },
         "es" : {
@@ -1817,18 +1816,6 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
             "code" : "ac0.25",
-            "description" : ""
-          },
-          "ac0.26" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.26",
-            "description" : ""
-          },
-          "ac0.27" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.27",
             "description" : ""
           },
           "at0110.1" : {
@@ -1931,6 +1918,18 @@
             "text" : "Episodicidad",
             "description" : "Categoría de este episodio para el problema/diagnóstico identificado.",
             "comment" : "Por ejemplo: \"Nuevo\" permitirá a los médicos distinguir un nuevo episodio agudo de otitis media que pueda haber surgido poco después de un diagnóstico previo, para distinguirlo de un diagnóstico de otitis media crónica no resuelto o \"en curso\". El tratamiento de los episodios recurrentes, nuevos y agudos de una afección puede diferir significativamente del de la misma afección que no se resuelve ni responde al tratamiento. En muchas situaciones, el médico no podrá determinarlo, por lo que la opción indeterminada puede ser apropiada."
+          },
+          "ac0.43" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.43",
+            "description" : ""
+          },
+          "ac0.45" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.45",
+            "description" : ""
           }
         }
       },
@@ -2063,6 +2062,96 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.27",
           "members" : [ "at0097" ]
+        },
+        "ac0.28" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.28",
+          "members" : [ "at0097" ]
+        },
+        "ac0.29" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.29",
+          "members" : [ "at0097" ]
+        },
+        "ac0.30" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.30",
+          "members" : [ "at0097" ]
+        },
+        "ac0.31" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.31",
+          "members" : [ "at0097" ]
+        },
+        "ac0.32" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.32",
+          "members" : [ "at0097" ]
+        },
+        "ac0.33" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.33",
+          "members" : [ "at0097" ]
+        },
+        "ac0.34" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.34",
+          "members" : [ "at0097" ]
+        },
+        "ac0.35" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.35",
+          "members" : [ "at0097" ]
+        },
+        "ac0.36" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.36",
+          "members" : [ "at0097" ]
+        },
+        "ac0.37" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.37",
+          "members" : [ "at0105" ]
+        },
+        "ac0.38" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.38",
+          "members" : [ "at0105" ]
+        },
+        "ac0.39" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.39",
+          "members" : [ "at0105" ]
+        },
+        "ac0.40" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.40",
+          "members" : [ "at0105" ]
+        },
+        "ac0.41" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.41",
+          "members" : [ "at0097" ]
+        },
+        "ac0.42" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.42",
+          "members" : [ "at0097" ]
+        },
+        "ac0.43" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.43",
+          "members" : [ "at0097" ]
+        },
+        "ac0.44" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.44",
+          "members" : [ "at0105" ]
+        },
+        "ac0.45" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.45",
+          "members" : [ "at0105" ]
         }
       }
     },
