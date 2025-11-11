@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9b7330c4c92286373e05056997684b34",
+      "MD5-CAM-1.0.1" : "3200781e5e1bc1a62f01209dc246d809",
       "PARENT:MD5-CAM-1.0.1" : "808AFCC062571B42A5906F63A364C731",
-      "sem_ver" : "1.1.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1435,7 +1435,7 @@
             "code" : "at0000.1",
             "text" : "Problem/diagnose-kvalifikator",
             "description" : "Brukes for å angi progresjon eller recidiv",
-            "comment" : "2.mai 2025 \nUtkast til struktur for å angi progresjon og residiv knyttet til hhv. lokalt, regionalt og metastase. \nVi bruker feltene i arketypen for progresjon og bedringsfase for å uttrykke hhv. progresjon og residiv. \nI tillegg legges manifisteringen (lokalt, metastase, etc.) inn i feltet forekomst. \n\nDet ser ut til å være en struktur som følger arketypen godt. "
+            "comment" : "Designkommentar 11.11.25\nStruktur for å angi om en sykdomsutvikling/tumorhendelse (tumor-event) for en spesifikk diagnose er i progresjon (definert her som forverring) eller er residivert. Vi bruker feltene i arketypen for progresjon og bedringsfase for å uttrykke hhv. progresjonen dvs. forverring av diagnosen, eller om den er residiviert. \n\nI problem/diagnose arketypens \"variant\" element sier vi noe om hendelsestypen er hhv. lokalt, regionalt, metastase eller biokjemisk. \n\n"
           },
           "at0102.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -2496,6 +2496,21 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0026.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
           "nodeId" : "at0022.2",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -2601,6 +2616,20 @@
             "code" : "at0001.1",
             "text" : "Beskrivelse av påvisningsmetode",
             "description" : "Fritekstlig beskrivelse av typen undersøkelse eller utredning som er utført for å komme fram til sykdomsutviklingen."
+          },
+          "at0026" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026",
+            "text" : "Dato/tid for klinisk relevans",
+            "description" : "Dato/tid når resultatet ble tatt inn som grunnlag for utsagnet.",
+            "comment" : "Designkommentar:\nDato/tid for hendelsestidspunktet, diagnosedato for tilbakefallet. \nDenne datoen kan hentes inn fra kartleggingsarketypen for sykdomsutvikling/tumor-event "
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "Dato/tid for klinisk relevans",
+            "description" : "Dato/tid for sykdomsutviklingen/tumor-eventet",
+            "comment" : "Designkommentar:\nDato/tid for sykdomsutviklingen/tumor-event/forverringen. Denne kan man hente fra kartleggingsarketypen brukt for å få bekrefte om det skjedd en progresjon (forverring) eller om det er residivert. "
           }
         },
         "de" : {
