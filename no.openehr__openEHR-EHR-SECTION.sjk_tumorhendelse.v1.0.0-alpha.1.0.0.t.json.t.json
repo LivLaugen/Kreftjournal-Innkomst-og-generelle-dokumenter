@@ -21,9 +21,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "e705a67c5b0b1d913b62f287e0ece7ce",
+      "MD5-CAM-1.0.1" : "2c55aca8803e2b6ae6b7aec94ce9bf19",
       "PARENT:MD5-CAM-1.0.1" : "808AFCC062571B42A5906F63A364C731",
-      "sem_ver" : "6.0.0",
+      "sem_ver" : "7.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -382,7 +382,6 @@
           }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
-            "occurrences" : "0..0",
             "nodeId" : "at0073.1",
             "attributes" : [ {
               "@type" : "C_ATTRIBUTE",
@@ -400,7 +399,7 @@
                     "terminologyId" : {
                       "value" : "local"
                     },
-                    "constraint" : [ "ac0.3" ],
+                    "constraint" : [ "ac0.4" ],
                     "selectedTerminologies" : [ ]
                   } ]
                 } ],
@@ -459,10 +458,10 @@
           "description" : "*Identification of the problem or diagnosis, by name.(en)",
           "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -481,10 +480,10 @@
           "description" : "Identificación del problema o diagnóstico, por nombre.",
           "comment" : "Se prefiere la codificación del nombre del problema o diagnóstico mediante una terminología cuando esto sea posible."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -503,10 +502,10 @@
           "description" : "Namentliche Identifikation des Problems oder der Diagnose.",
           "comment" : "Wo möglich, ist die Kodierung des Problems oder der Diagnose über eine Terminologie zu bevorzugen."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -525,10 +524,10 @@
           "description" : "Identification of the problem or diagnosis, by name.",
           "comment" : "Coding of the name of the problem or diagnosis with a terminology is preferred, where possible."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "(Synthesized)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -547,10 +546,10 @@
           "description" : "*Identification of the problem or diagnosis, by name.(en)",
           "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -569,10 +568,10 @@
           "description" : "Identificação do problema ou diagnóstico, por nome.",
           "comment" : "Quando possível, é preferível usar a codificação do nome do problema ou diagnóstico com uma terminologia."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -612,10 +611,10 @@
           "description" : "Den spesifiserte hendelsestypen for sykdomsutviklingen. Også noen ganger kalt tilbakefallstype.",
           "comment" : "Designkommentar:\nbruker kodeverket \n*255470001  Local (qualifier value) \n*410674003 Regional (qualifier value) \n*261007001 Distant (qualifier value) \n*80534008 Biochemical (qualifier value) \n\nNoen ganger er residiv både lokalt/ regionalt og metastasert, derfor er denne 0..*."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -634,10 +633,10 @@
           "description" : "Identifiering av problemet eller diagnosen efter namn.",
           "comment" : "Kodning av namnet på problemet eller diagnosen med en terminologi är att föredra, om det är tillämpligt."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -656,10 +655,10 @@
           "description" : "명칭으로 문제 또는 진단의 식별.",
           "comment" : "가능하다면, 용어체계를 통한 문제 또는 진단의 명칭을 코딩하는 것이 좋음."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -678,10 +677,10 @@
           "description" : "Ongelman tai diagnoosin tunnistaminen nimellä.",
           "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -700,10 +699,10 @@
           "description" : "Nome/identificativo del problema o della diagnosi.",
           "comment" : "Si preferisce, ove possibile, la codifica del problema o diagnosi con una terminologia."
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -722,10 +721,10 @@
           "description" : "Identificatie van het probleem of de diagnose bij naam.\r\n                            ",
           "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
@@ -744,18 +743,18 @@
           "description" : "*Identification of the problem or diagnosis, by name.(en)",
           "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
         },
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       },
       "ca" : {
-        "ac0.3" : {
+        "ac0.4" : {
           "@type" : "ARCHETYPE_TERM",
           "text" : "*(Synthesized) (en)",
-          "code" : "ac0.3",
+          "code" : "ac0.4",
           "description" : ""
         }
       }
@@ -776,6 +775,11 @@
       "ac0.3" : {
         "@type" : "VALUE_SET",
         "id" : "ac0.3",
+        "members" : [ "at0074", "at0075", "at0076" ]
+      },
+      "ac0.4" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.4",
         "members" : [ "at0074", "at0075", "at0076" ]
       }
     }
