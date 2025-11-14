@@ -1,4 +1,4 @@
-archetype (adl_version=1.4; uid=459e617e-5bf3-4a8c-b0fe-5acbbd0ae385)
+archetype (adl_version=1.4; uid=a82233b9-7f2d-4dd5-8db4-37f6963cfd8c)
 	openEHR-EHR-SECTION.adhoc.v1
 
 concept
@@ -76,6 +76,22 @@ language
 				["email"] = <"vanessapereira@protonmail.com">
 			>
 		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+				["name"] = <"Laura Moral Lopez">
+				["organisation"] = <"Sistema de Salut de Catalunya">
+				["email"] = <"lmorallopez@gmail.com, lauramoral@catsalut.cat">
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+				["name"] = <"Laura Moral Lopez">
+				["organisation"] = <"Sistema de Salut de Catalunya">
+				["email"] = <"lmorallopez@gmail.com">
+			>
+		>
 	>
 
 description
@@ -86,7 +102,7 @@ description
 		["email"] = <"ian@freshEHR.com">
 	>
 	lifecycle_state = <"published">
-	other_contributors = <"Tomas Alme, DIPS, Norway","Magnus Alsaker, Helsedirektoratet, Norway","Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)","Koray Atalag, University of Auckland, New Zealand","Gustavo Bacelar-Silva, Healthcare Designs, Brazil (openEHR Translation Editor)","Silje Bakke, Bergen Hospital Trust, Norway","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (Nasjonal IKT redaktør)","Rong Chen, Cambio Healthcare Systems, Sweden","Stephen Chu, Queensland Health, Australia","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Einar Fosse, UNN HF, Norwegian Centre for Integrated Care and Telemedicine, Norway","Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)","Carrick Gillespie, Omniq AB, Sweden","Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse Nord RHF, Norway (Nasjonal IKT redaktør)","Susanna Jönsson, Landstinget i Värmland, Sweden","Konstantinos Kalliamvakos, Cambio Healthcare Systems, Sweden","Lars Karlsen, DIPS ASA, Norway","Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Rikard Lovstrom, Swedish Medical Association, Sweden","Hallvard Lærum, Direktoratet for e-helse, Norway","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Lars Morgan Karlsen, DIPS ASA, Norway","Bjørn Næss, DIPS ASA, Norway","Jarl Sandberg, Tieto Sweden Healthcare & Welfare AB, Sweden (openEHR Translation Editor)","Åsa Skagerhult, Region Östergötland, Sweden (openEHR Translation Editor)","Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden","Erik Sundvall, Region Östergötland + Linköping University, Sweden","Line Sæle, Nasjonal IKT HF, Norway","John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)","Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)">
+	other_contributors = <"Tomas Alme, DIPS, Norway","Magnus Alsaker, Helsedirektoratet, Norway","Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)","Koray Atalag, University of Auckland, New Zealand","Gustavo Bacelar-Silva, Healthcare Designs, Brazil (openEHR Translation Editor)","Silje Bakke, Bergen Hospital Trust, Norway","Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)","Rong Chen, Cambio Healthcare Systems, Sweden","Stephen Chu, Queensland Health, Australia","Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway","Einar Fosse, UNN HF, Norwegian Centre for Integrated Care and Telemedicine, Norway","Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)","Carrick Gillespie, Omniq AB, Sweden","Susanna Jönsson, Landstinget i Värmland, Sweden","Konstantinos Kalliamvakos, Cambio Healthcare Systems, Sweden","Lars Karlsen, DIPS ASA, Norway","Lars Morgan Karlsen, DIPS ASA, Norway","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Rikard Lovstrom, Swedish Medical Association, Sweden","Hallvard Lærum, Direktoratet for e-helse, Norway","Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)","Bjørn Næss, DIPS ASA, Norway","Jarl Sandberg, Tieto Sweden Healthcare & Welfare AB, Sweden (openEHR Translation Editor)","Åsa Skagerhult, Region Östergötland, Sweden (openEHR Translation Editor)","Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden","Erik Sundvall, Region Östergötland + Linköping University, Sweden","Line Sæle, Nasjonal IKT HF, Norway","John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
 	details = <
 		["de"] = <
 			language = <[ISO_639-1::de]>
@@ -157,6 +173,18 @@ description
 			use = <"*Use to construct a section heading in a template that will be renamed to suit the specific clinical context. For example: \"Ad hoc heading\" renamed to \"Examination findings\".(en)">
 			misuse = <"*Not to be left unchanged in a template.(en)">
 		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Proporcionar un encapçalament de secció genèric que serà rebatejat en una plantilla per adaptar-se a un context clínic específic.">
+			use = <"Utilitzar per a construir un encapçalament de secció en una plantilla que serà rebatejada per adaptar-se al context clínic específic. Per exemple: «Títol ad hoc» rebatejat a «Resultats de l'examen».">
+			misuse = <"No s'ha de deixar sense canvis en una plantilla.">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Per proporcionar una capçalera de secció genèrica que es canviarà de nom en una plantilla per adaptar-se a un context clínic específic.">
+			use = <"Utilitzar-se per construir un encapçalament de secció en una plantilla que es canviarà de nom per adaptar-se al context clínic específic. Per exemple: \"Encapçalament ad hoc\" canviat de nom a \"Conclusió de l'examen\".">
+			misuse = <"No es deixarà sense canvis en una plantilla.">
+		>
 	>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -165,9 +193,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9D358EB1048EA1401802C3E1FDFB9A29">
-		["build_uid"] = <"ad517cad-3e3b-4052-9d61-60c335f931aa">
-		["revision"] = <"1.0.2">
+		["MD5-CAM-1.0.1"] = <"E7D2CBE63256A27215D368CB0FCC3960">
+		["build_uid"] = <"ac68acfd-77e6-40c5-beef-f63fc86209c9">
+		["revision"] = <"1.0.9">
 	>
 
 definition
@@ -252,6 +280,22 @@ ontology
 				["at0000"] = <
 					text = <"Rubrique ad hoc">
 					description = <"Un en-tête de section générique qui doit être renommé dans un modèle pour s'adapter à un contexte clinique spécifique.">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Capçalera ad hoc">
+					description = <"Una capçalera de secció genèrica que s'ha de rebatejar en una plantilla per adaptar-se a un context clínic específic.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Encapçalament ad hoc">
+					description = <"Un encapçalament de secció genèric que s'hauria de reanomenar en una plantilla per adaptar-se a un context clínic específic.">
 				>
 			>
 		>
