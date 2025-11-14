@@ -1,4 +1,4 @@
-archetype (adl_version=1.4; uid=ca39dbe1-20f7-4052-aed0-8209353da2ff)
+archetype (adl_version=1.4; uid=251b76fc-936e-45df-8869-3babe10969cb)
 	openEHR-EHR-CLUSTER.occupation_record.v1
 
 concept
@@ -339,8 +339,8 @@ No debe ser usado para registrar información sobre la ocupación de un individu
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"E6C56867FAA44D4D86E669619D4FB455">
-		["build_uid"] = <"e5aaec7e-352c-42e4-b3a5-5b237dbd6d9d">
+		["MD5-CAM-1.0.1"] = <"6EFFAB5F512D4C7C4C9CCFCDC48670C9">
+		["build_uid"] = <"d25ea19d-db32-4977-8dd0-affee30cc0e2">
 		["revision"] = <"1.2.0">
 	>
 
