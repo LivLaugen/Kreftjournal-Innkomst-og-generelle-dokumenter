@@ -24,10 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "4a5d0c75ee825a4aa9d752885c80552d",
+      "MD5-CAM-1.0.1" : "05ce7572108012728691dc70d2b45b72",
       "original_language" : "ISO_639-1::nb",
       "PARENT:MD5-CAM-1.0.1" : "6AFDF4A34EB96917079AC64DB5F65463",
-      "sem_ver" : "44.0.0",
+      "sem_ver" : "44.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -17105,7 +17105,15 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "nb" : { }
+        "nb" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Klassifisering av informasjon",
+            "description" : "*",
+            "comment" : "Designkommentar:\nTa med i kodeverkslisten. "
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -17315,7 +17323,15 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "nb" : { }
+        "nb" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Klassifisering av informasjon",
+            "description" : "*",
+            "comment" : "Designkommentar:\nSe litt på kode/termonologi. \nHusk å ta det med til kodeliste. "
+          }
+        }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -18063,6 +18079,13 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.210",
             "description" : ""
+          },
+          "at0034.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0034",
+            "text" : "Kartleggingsformål",
+            "description" : "Konteksten eller årsaken for kartleggingen.",
+            "comment" : "Designkommentar:\nSkal vi legge til en verdi 3 - uspesifikk / annet / ikke basline eller under behandling. \nBrukes i de tilfellene hvor man ikke har tatt stilling til om det er basline eller under behandling, slik det var før vi tok stilling til tidspunkt. HH bruker den første registreringstidspunktet som basline. "
           }
         },
         "de" : {
