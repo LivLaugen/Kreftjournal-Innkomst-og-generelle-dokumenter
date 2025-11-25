@@ -24,10 +24,10 @@
       "Sign off" : "",
       "Speciality" : "",
       "User roles" : "",
-      "MD5-CAM-1.0.1" : "05ce7572108012728691dc70d2b45b72",
+      "MD5-CAM-1.0.1" : "3f816725c60339742dc0070672974d14",
       "original_language" : "ISO_639-1::nb",
       "PARENT:MD5-CAM-1.0.1" : "6AFDF4A34EB96917079AC64DB5F65463",
-      "sem_ver" : "44.0.1",
+      "sem_ver" : "44.0.2",
       "build_uid" : ""
     },
     "details" : {
@@ -18054,7 +18054,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0022.2",
             "text" : "Hørsel",
-            "description" : "Detaljer om subjektiv hørselstap."
+            "description" : "Detaljer om subjektiv hørselstap.",
+            "comment" : "Designkommentar:\nDenne strukturen kan gjentas hvis det er andre spesifikke problemer man ønsker å dokumentere."
           },
           "at0005.2" : {
             "@type" : "ARCHETYPE_TERM",
@@ -20299,7 +20300,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0000.1",
             "text" : "Subjektiv hørselstap",
-            "description" : "Rapportert observasjon av fysiske tegn eller beskrivelse av unormale eller ubehagelige fornemmelser i kropp og/eller sinn."
+            "description" : "Rapportert observasjon av fysiske tegn eller beskrivelse av unormale eller ubehagelige fornemmelser i kropp og/eller sinn.",
+            "comment" : "Designkommentar:\nDenne strukturen kan man gjenta hvis man har andre bivirkninger/problemer som man vil registrere. "
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
