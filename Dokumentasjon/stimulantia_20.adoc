@@ -1,5 +1,5 @@
 = Stimulantia
-
+:toc:
 
 == Metadata
 
@@ -12,7 +12,7 @@ Archetype:: openEHR-EHR-SECTION.adhoc.v1
 
 
 
-:toc:
+
 
 
 
@@ -106,4 +106,5 @@ a|
 Dette elementet kan også brukes til å ta inn fritekstlige beskrivelser av substansbruk fra eksisterende eller historiske kliniske systemer.
 |at0031| 0..1| DV_DATE_TIME | Sist oppdatert
 |
+
 |====
