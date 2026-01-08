@@ -3,12 +3,12 @@
 Oversikt over dokumentmaler i produksjon per 27.10.2025
 
 |===
-| **Navn i DIPS Arena** | **Navn på templat** | **Versjon i produksjon**
-| Sykehistorie onk | Oncology-Disease-History-Generic | 20
-| Innkomstjournal post/pol onk | Oncology-General-Reception-Journal | 7
-| Administativ informasjon | Oncology-Important-Information | 7
-| Poliklinisk notat onk | Oncology-Outpatient-Note-Generic  | 24
-| Sosialanamnese | Oncology-SocialAnamnesis | 20
-| Tidligere sykdommer/Komorbiditet ONK | Oncology-Comorbidity | 20
-| Stimulantia | Oncology-Stimulantia | 20
+| **Navn i DIPS Arena** | **Navn på templat** | **Versjon i produksjon** |**Dato endret**
+| Sykehistorie onk | Oncology-Disease-History-Generic | 20 | 08.01.2026 
+| Innkomstjournal post/pol onk | Oncology-General-Reception-Journal | 7| 08.01.2026 
+| Administativ informasjon | Oncology-Important-Information | 7| 08.01.2026 
+| Poliklinisk notat onk | Oncology-Outpatient-Note-Generic  | 24| 08.01.2026 
+| Sosialanamnese | Oncology-SocialAnamnesis | 20| 08.01.2026 
+| Tidligere sykdommer/Komorbiditet ONK | Oncology-Comorbidity | 20| 08.01.2026 
+| Stimulantia | Oncology-Stimulantia | 20| 08.01.2026 
 |===
