@@ -1,0 +1,1853 @@
+{
+  "templateId" : "Oncology-Comorbidity_v20",
+  "semVer" : "10.0.0",
+  "version" : "2.3",
+  "defaultLanguage" : "nb",
+  "languages" : [ "nb" ],
+  "tree" : {
+    "id" : "klinisk_kontakt",
+    "name" : "Klinisk kontakt",
+    "localizedName" : "Klinisk kontakt",
+    "rmType" : "COMPOSITION",
+    "nodeId" : "openEHR-EHR-COMPOSITION.encounter.v1",
+    "min" : 1,
+    "max" : 1,
+    "localizedNames" : {
+      "nb" : "Klinisk kontakt"
+    },
+    "localizedDescriptions" : {
+      "nb" : "Interaksjon, kontakt eller omsorgshendelse mellom et individ og helsepersonell."
+    },
+    "aqlPath" : "",
+    "children" : [ {
+      "id" : "context",
+      "rmType" : "EVENT_CONTEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/context",
+      "children" : [ {
+        "id" : "onkologi_aql_hjelpefelt",
+        "name" : "Onkologi AQL hjelpefelt",
+        "localizedName" : "Onkologi AQL hjelpefelt",
+        "rmType" : "CLUSTER",
+        "nodeId" : "openEHR-EHR-CLUSTER.oncology_aql_support_dips.v1",
+        "min" : 0,
+        "max" : -1,
+        "localizedNames" : {
+          "nb" : "Onkologi AQL hjelpefelt"
+        },
+        "localizedDescriptions" : {
+          "nb" : ""
+        },
+        "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.oncology_aql_support_dips.v1]",
+        "children" : [ {
+          "id" : "aql_krefttype",
+          "name" : "AQL krefttype",
+          "localizedName" : "AQL krefttype",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0001",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "AQL krefttype"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Felt til bruk for gjenbruk av krefttype fra startskjema onkologi. "
+          },
+          "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.oncology_aql_support_dips.v1]/items[at0001]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "01",
+              "label" : "Sarkom",
+              "localizedLabels" : {
+                "nb" : "Sarkom"
+              }
+            }, {
+              "value" : "02",
+              "label" : "Hode og halskreft",
+              "localizedLabels" : {
+                "nb" : "Hode og halskreft"
+              }
+            }, {
+              "value" : "03",
+              "label" : "Hjernesvulst",
+              "localizedLabels" : {
+                "nb" : "Hjernesvulst"
+              }
+            }, {
+              "value" : "04",
+              "label" : "Brystkreft",
+              "localizedLabels" : {
+                "nb" : "Brystkreft"
+              }
+            }, {
+              "value" : "05",
+              "label" : "Lungekreft",
+              "localizedLabels" : {
+                "nb" : "Lungekreft"
+              }
+            }, {
+              "value" : "06",
+              "label" : "Kreft i fordøyelsessystemet",
+              "localizedLabels" : {
+                "nb" : "Kreft i fordøyelsessystemet"
+              }
+            }, {
+              "value" : "07",
+              "label" : "Gynekologisk kreft",
+              "localizedLabels" : {
+                "nb" : "Gynekologisk kreft"
+              }
+            }, {
+              "value" : "08",
+              "label" : "Kreft i nyre og urinveier",
+              "localizedLabels" : {
+                "nb" : "Kreft i nyre og urinveier"
+              }
+            }, {
+              "value" : "09",
+              "label" : "Benmargs- og blodkreft",
+              "localizedLabels" : {
+                "nb" : "Benmargs- og blodkreft"
+              }
+            }, {
+              "value" : "10",
+              "label" : "Lymfom",
+              "localizedLabels" : {
+                "nb" : "Lymfom"
+              }
+            }, {
+              "value" : "11",
+              "label" : "Hudkreft",
+              "localizedLabels" : {
+                "nb" : "Hudkreft"
+              }
+            }, {
+              "value" : "12",
+              "label" : "Kreft i mannlige kjønnsorganer",
+              "localizedLabels" : {
+                "nb" : "Kreft i mannlige kjønnsorganer"
+              }
+            }, {
+              "value" : "13",
+              "label" : "Kreft i endokrine kjertler",
+              "localizedLabels" : {
+                "nb" : "Kreft i endokrine kjertler"
+              }
+            }, {
+              "value" : "14",
+              "label" : "Nevroendokrin kreft",
+              "localizedLabels" : {
+                "nb" : "Nevroendokrin kreft"
+              }
+            }, {
+              "value" : "15",
+              "label" : "Barnekreft",
+              "localizedLabels" : {
+                "nb" : "Barnekreft"
+              }
+            }, {
+              "value" : "16",
+              "label" : "Øyekreft",
+              "localizedLabels" : {
+                "nb" : "Øyekreft"
+              }
+            }, {
+              "value" : "17",
+              "label" : "Svulst av ukjent opprinnelse / Annet kreft",
+              "localizedLabels" : {
+                "nb" : "Svulst av ukjent opprinnelse / Annet kreft"
+              }
+            } ],
+            "terminology" : "no.onk.kreftgruppering"
+          } ]
+        } ]
+      }, {
+        "id" : "template_versjonsinformasjon",
+        "name" : "Template versjonsinformasjon",
+        "localizedName" : "Template versjonsinformasjon",
+        "rmType" : "CLUSTER",
+        "nodeId" : "openEHR-EHR-CLUSTER.template_semver_dips.v1",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "nb" : "Template versjonsinformasjon"
+        },
+        "localizedDescriptions" : {
+          "nb" : "Informasjon om templatens semantiske versjonering"
+        },
+        "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.template_semver_dips.v1]",
+        "children" : [ {
+          "id" : "navn",
+          "name" : "Navn",
+          "localizedName" : "Navn",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0001",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Navn"
+          },
+          "localizedDescriptions" : {
+            "nb" : "*The name/title of the composition. Used to group information. (nb)"
+          },
+          "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.template_semver_dips.v1]/items[at0001]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "TM3",
+              "label" : "Onkologi komorbiditet",
+              "localizedLabels" : {
+                "nb" : "Onkologi komorbiditet"
+              }
+            } ],
+            "terminology" : "no.dips.oncology"
+          } ]
+        }, {
+          "id" : "semver",
+          "name" : "Semver",
+          "localizedName" : "Semver",
+          "rmType" : "CLUSTER",
+          "nodeId" : "at0003",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Semver"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Semantisk versjonering av templaten. "
+          },
+          "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.template_semver_dips.v1]/items[at0003]",
+          "children" : [ {
+            "id" : "major",
+            "name" : "Major",
+            "localizedName" : "Major",
+            "rmType" : "DV_COUNT",
+            "nodeId" : "at0004",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "nb" : "Major"
+            },
+            "localizedDescriptions" : {
+              "nb" : "Markerer brytende endringer i templaten"
+            },
+            "aqlPath" : "/context/other_context[at0001]/items[openEHR-EHR-CLUSTER.template_semver_dips.v1]/items[at0003]/items[at0004]/value",
+            "inputs" : [ {
+              "type" : "INTEGER",
+              "validation" : {
+                "range" : {
+                  "minOp" : ">=",
+                  "min" : 1,
+                  "maxOp" : "<=",
+                  "max" : 1
+                }
+              }
+            } ]
+          } ]
+        } ]
+      }, {
+        "id" : "start_time",
+        "name" : "Start_time",
+        "rmType" : "DV_DATE_TIME",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/start_time",
+        "inputs" : [ {
+          "type" : "DATETIME"
+        } ],
+        "inContext" : true
+      }, {
+        "id" : "setting",
+        "name" : "Setting",
+        "rmType" : "DV_CODED_TEXT",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/context/setting",
+        "inputs" : [ {
+          "suffix" : "code",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "value",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "komorbiditet_utredning",
+      "name" : "Komorbiditet_utredning",
+      "localizedName" : "Komorbiditet_utredning",
+      "rmType" : "SECTION",
+      "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "nb" : "Komorbiditet_utredning"
+      },
+      "localizedDescriptions" : {
+        "nb" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
+      },
+      "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']",
+      "children" : [ {
+        "id" : "kartlegging_komorbiditet",
+        "name" : "Kartlegging komorbiditet",
+        "localizedName" : "Kartlegging komorbiditet",
+        "rmType" : "OBSERVATION",
+        "nodeId" : "openEHR-EHR-OBSERVATION.problem_screening.v1",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "nb" : "Kartlegging komorbiditet"
+        },
+        "localizedDescriptions" : {
+          "nb" : "Spørsmål og tilhørende svar som brukes til å kartlegge bekymringer, plager, problemer eller diagnoser."
+        },
+        "annotations" : {
+          "comment" : "Svarene kan være selvrapporterte."
+        },
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']",
+        "children" : [ {
+          "id" : "kartleggingsformål",
+          "name" : "Kartleggingsformål",
+          "localizedName" : "Kartleggingsformål",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0034",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Kartleggingsformål"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Konteksten eller årsaken for kartleggingen."
+          },
+          "annotations" : {
+            "comment" : "I prosjektet strukturert kreftjournal er det etablert et eget kodeverk for kartleggingsformål. no.onk.screening.problem."
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']/data[at0001]/events[at0002]/data[at0003]/items[at0034]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "kom",
+              "label" : "Komorbiditet",
+              "localizedLabels" : {
+                "nb" : "Komorbiditet"
+              }
+            } ],
+            "terminology" : "no.onk.screening.problem"
+          } ]
+        }, {
+          "id" : "har_pasient_kjent_komorbiditet",
+          "name" : "Har pasient kjent komorbiditet?",
+          "localizedName" : "Har pasient kjent komorbiditet?",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0028",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Har pasient kjent komorbiditet?"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Finnes det noen bekymringer, plager, problemer eller diagnoser. som er innenfor kartleggingsformålet?"
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']/data[at0001]/events[at0002]/data[at0003]/items[at0028,'Har pasient kjent komorbiditet?']/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0031",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "termBindings" : {
+                "SNOMED-CT" : {
+                  "value" : "[SNOMED-CT::373066001]",
+                  "terminologyId" : "SNOMED-CT"
+                }
+              }
+            }, {
+              "value" : "at0032",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "termBindings" : {
+                "SNOMED-CT" : {
+                  "value" : "[SNOMED-CT::373067005]",
+                  "terminologyId" : "SNOMED-CT"
+                }
+              }
+            }, {
+              "value" : "at0033",
+              "label" : "Ukjent",
+              "localizedLabels" : {
+                "nb" : "Ukjent"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "termBindings" : {
+                "SNOMED-CT" : {
+                  "value" : "[SNOMED-CT::261665006]",
+                  "terminologyId" : "SNOMED-CT"
+                }
+              }
+            } ]
+          } ]
+        }, {
+          "id" : "overordnet_merknad_komorbiditet",
+          "name" : "Overordnet merknad komorbiditet",
+          "localizedName" : "Overordnet merknad komorbiditet",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0043",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Overordnet merknad komorbiditet"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Fritekstbeskrivelse om bekymringer, plager, problemer eller diagnoser som er innenfor kartleggingsformålet."
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']/data[at0001]/events[at0002]/data[at0003]/items[at0043,'Overordnet merknad komorbiditet']/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        }, {
+          "id" : "time",
+          "name" : "Time",
+          "rmType" : "DV_DATE_TIME",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']/data[at0001]/events[at0002]/time",
+          "inputs" : [ {
+            "type" : "DATETIME"
+          } ],
+          "inContext" : true
+        }, {
+          "id" : "language",
+          "name" : "Language",
+          "rmType" : "CODE_PHRASE",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']/language",
+          "inContext" : true
+        }, {
+          "id" : "encoding",
+          "name" : "Encoding",
+          "rmType" : "CODE_PHRASE",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']/encoding",
+          "inContext" : true
+        }, {
+          "id" : "subject",
+          "name" : "Subject",
+          "rmType" : "PARTY_PROXY",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.problem_screening.v1,'Kartlegging komorbiditet']/subject",
+          "inputs" : [ {
+            "suffix" : "id",
+            "type" : "TEXT"
+          }, {
+            "suffix" : "id_scheme",
+            "type" : "TEXT"
+          }, {
+            "suffix" : "id_namespace",
+            "type" : "TEXT"
+          }, {
+            "suffix" : "name",
+            "type" : "TEXT"
+          } ],
+          "inContext" : true
+        } ]
+      }, {
+        "id" : "gruppering_icd10_kapittel",
+        "name" : "Gruppering ICD10 kapittel",
+        "localizedName" : "Gruppering ICD10 kapittel",
+        "rmType" : "SECTION",
+        "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "nb" : "Gruppering ICD10 kapittel"
+        },
+        "localizedDescriptions" : {
+          "nb" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
+        },
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']",
+        "children" : [ {
+          "id" : "forholdsregel",
+          "name" : "Forholdsregel",
+          "localizedName" : "Forholdsregel",
+          "rmType" : "EVALUATION",
+          "nodeId" : "openEHR-EHR-EVALUATION.precaution.v1",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "nb" : "Forholdsregel"
+          },
+          "localizedDescriptions" : {
+            "nb" : "En klinisk tilstand eller status som er unik eller særegen for et individ, og som regnes som viktig informasjon i forbindelse med beslutninger om behandling."
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']/items[openEHR-EHR-EVALUATION.precaution.v1]",
+          "children" : [ {
+            "id" : "tilstand_hovedkapitler_icd-10",
+            "name" : "Tilstand: Hovedkapitler ICD-10",
+            "localizedName" : "Tilstand: Hovedkapitler ICD-10",
+            "rmType" : "DV_CODED_TEXT",
+            "nodeId" : "at0002",
+            "min" : 1,
+            "max" : 1,
+            "localizedNames" : {
+              "nb" : "Tilstand: Hovedkapitler ICD-10"
+            },
+            "localizedDescriptions" : {
+              "nb" : "Navnet på tilstanden eller statusen."
+            },
+            "annotations" : {
+              "comment" : "I prosjektet strukturert kreftjournal er det etablert et eget kodeverk for hovedkapitler i ICD-10, no.icd10.kapitler."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']/items[openEHR-EHR-EVALUATION.precaution.v1]/data[at0001]/items[at0002,'Tilstand: Hovedkapitler ICD-10']/value",
+            "inputs" : [ {
+              "suffix" : "code",
+              "type" : "CODED_TEXT",
+              "list" : [ {
+                "value" : "I",
+                "label" : "Infeksjonssykdommer og parasittsykdommer, visse sykd. (Kap.I; A00-B99)",
+                "localizedLabels" : {
+                  "nb" : "Infeksjonssykdommer og parasittsykdommer, visse sykd. (Kap.I; A00-B99)"
+                }
+              }, {
+                "value" : "II",
+                "label" : "Svulster (Kap.II; C00-D48)",
+                "localizedLabels" : {
+                  "nb" : "Svulster (Kap.II; C00-D48)"
+                }
+              }, {
+                "value" : "III",
+                "label" : "Blodsykdommer og sykdom i bloddannende organer og visse tilstander som angår immunsystemet (Kap.III; D50-D89)",
+                "localizedLabels" : {
+                  "nb" : "Blodsykdommer og sykdom i bloddannende organer og visse tilstander som angår immunsystemet (Kap.III; D50-D89)"
+                }
+              }, {
+                "value" : "IV",
+                "label" : "Endokrine sykdommer, ernæringssykdommer og metabolske forstyrrelser (Kap.IV; E00-E90)",
+                "localizedLabels" : {
+                  "nb" : "Endokrine sykdommer, ernæringssykdommer og metabolske forstyrrelser (Kap.IV; E00-E90)"
+                }
+              }, {
+                "value" : "V",
+                "label" : "Psykiske lidelser og atferdsforstyrrelser (Kap.V; F00-F99)",
+                "localizedLabels" : {
+                  "nb" : "Psykiske lidelser og atferdsforstyrrelser (Kap.V; F00-F99)"
+                }
+              }, {
+                "value" : "VI",
+                "label" : "Nervesystemet, sykdommer (Kap.VI; G00-G99)",
+                "localizedLabels" : {
+                  "nb" : "Nervesystemet, sykdommer (Kap.VI; G00-G99)"
+                }
+              }, {
+                "value" : "VII",
+                "label" : "Øyet og øyets omgivelser, sykdommer (Kap.VII; H00-H59)",
+                "localizedLabels" : {
+                  "nb" : "Øyet og øyets omgivelser, sykdommer (Kap.VII; H00-H59)"
+                }
+              }, {
+                "value" : "VIII",
+                "label" : "Øre og ørebensknute (processus mastoideus), sykdommer (Kap.VIII; H60-H95)",
+                "localizedLabels" : {
+                  "nb" : "Øre og ørebensknute (processus mastoideus), sykdommer (Kap.VIII; H60-H95)"
+                }
+              }, {
+                "value" : "IX",
+                "label" : "Sirkulasjonssystemet, sykdommer (Kap.IX; I00-I99)",
+                "localizedLabels" : {
+                  "nb" : "Sirkulasjonssystemet, sykdommer (Kap.IX; I00-I99)"
+                }
+              }, {
+                "value" : "X",
+                "label" : "Åndedrettssystemet, sykdommer (Kap.X; J00-J99)",
+                "localizedLabels" : {
+                  "nb" : "Åndedrettssystemet, sykdommer (Kap.X; J00-J99)"
+                }
+              }, {
+                "value" : "XI",
+                "label" : "Fordøyelsessystemet, sykdommer (Kap.XI; K00-K93)",
+                "localizedLabels" : {
+                  "nb" : "Fordøyelsessystemet, sykdommer (Kap.XI; K00-K93)"
+                }
+              }, {
+                "value" : "XII",
+                "label" : "Hud og underhud, sykdommer (Kap.XII; L00-L99)",
+                "localizedLabels" : {
+                  "nb" : "Hud og underhud, sykdommer (Kap.XII; L00-L99)"
+                }
+              }, {
+                "value" : "XIII",
+                "label" : "Muskel-skjelettsystemet og bindevev, sykdommer (Kap.XIII; M00-M99)",
+                "localizedLabels" : {
+                  "nb" : "Muskel-skjelettsystemet og bindevev, sykdommer (Kap.XIII; M00-M99)"
+                }
+              }, {
+                "value" : "XIV",
+                "label" : "Urin- og kjønnsorganer, sykdommer (Kap.XIV; N00-N99)",
+                "localizedLabels" : {
+                  "nb" : "Urin- og kjønnsorganer, sykdommer (Kap.XIV; N00-N99)"
+                }
+              }, {
+                "value" : "XV",
+                "label" : "Svangerskap, fødsel og barseltid (Kap.XV; O00-O99)",
+                "localizedLabels" : {
+                  "nb" : "Svangerskap, fødsel og barseltid (Kap.XV; O00-O99)"
+                }
+              }, {
+                "value" : "XVI",
+                "label" : "Perinatalperioden  - visse tilstander som oppstår (Kap.XVI; P00-P96)",
+                "localizedLabels" : {
+                  "nb" : "Perinatalperioden  - visse tilstander som oppstår (Kap.XVI; P00-P96)"
+                }
+              }, {
+                "value" : "XVII",
+                "label" : "Medfødte misdannelser, deformiteter og kromosomavvik (Kap.XVII; Q00-Q99)",
+                "localizedLabels" : {
+                  "nb" : "Medfødte misdannelser, deformiteter og kromosomavvik (Kap.XVII; Q00-Q99)"
+                }
+              }, {
+                "value" : "XVIII",
+                "label" : "Symptomer, tegn, unormale kliniske funn og laboratoriefunn, ikke klassifisert annet sted (Kap.XVIII; R00-R99)",
+                "localizedLabels" : {
+                  "nb" : "Symptomer, tegn, unormale kliniske funn og laboratoriefunn, ikke klassifisert annet sted (Kap.XVIII; R00-R99)"
+                }
+              }, {
+                "value" : "XIX",
+                "label" : "Skader, forgiftninger og visse andre konsekvenser av ytre årsaker (Kap.XIX; S00-T98)",
+                "localizedLabels" : {
+                  "nb" : "Skader, forgiftninger og visse andre konsekvenser av ytre årsaker (Kap.XIX; S00-T98)"
+                }
+              } ],
+              "terminology" : "no.icd10.kapitler"
+            } ]
+          }, {
+            "id" : "detaljer",
+            "name" : "Detaljer",
+            "localizedName" : "Detaljer",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0003",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "nb" : "Detaljer"
+            },
+            "localizedDescriptions" : {
+              "nb" : "Beskrivelse av underlaget som understøtter forholdsregelen."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']/items[openEHR-EHR-EVALUATION.precaution.v1]/data[at0001]/items[at0003,'Detaljer']/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          }, {
+            "id" : "sist_oppdatert",
+            "name" : "Sist oppdatert",
+            "localizedName" : "Sist oppdatert",
+            "rmType" : "DV_DATE_TIME",
+            "nodeId" : "at0004",
+            "min" : 0,
+            "max" : 1,
+            "dependsOn" : [ "tilstand_hovedkapitler_icd-10", "detaljer" ],
+            "localizedNames" : {
+              "nb" : "Sist oppdatert"
+            },
+            "localizedDescriptions" : {
+              "nb" : "Dato da forholdsregelinformasjonen sist ble oppdatert."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']/items[openEHR-EHR-EVALUATION.precaution.v1]/protocol[at0006]/items[at0004]/value",
+            "inputs" : [ {
+              "type" : "DATETIME"
+            } ]
+          }, {
+            "id" : "language",
+            "name" : "Language",
+            "rmType" : "CODE_PHRASE",
+            "min" : 1,
+            "max" : 1,
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']/items[openEHR-EHR-EVALUATION.precaution.v1]/language",
+            "inContext" : true
+          }, {
+            "id" : "encoding",
+            "name" : "Encoding",
+            "rmType" : "CODE_PHRASE",
+            "min" : 1,
+            "max" : 1,
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']/items[openEHR-EHR-EVALUATION.precaution.v1]/encoding",
+            "inContext" : true
+          }, {
+            "id" : "subject",
+            "name" : "Subject",
+            "rmType" : "PARTY_PROXY",
+            "min" : 1,
+            "max" : 1,
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'Gruppering ICD10 kapittel']/items[openEHR-EHR-EVALUATION.precaution.v1]/subject",
+            "inputs" : [ {
+              "suffix" : "id",
+              "type" : "TEXT"
+            }, {
+              "suffix" : "id_scheme",
+              "type" : "TEXT"
+            }, {
+              "suffix" : "id_namespace",
+              "type" : "TEXT"
+            }, {
+              "suffix" : "name",
+              "type" : "TEXT"
+            } ],
+            "inContext" : true
+          } ]
+        } ]
+      }, {
+        "id" : "icd10",
+        "name" : "ICD10",
+        "localizedName" : "ICD10",
+        "rmType" : "SECTION",
+        "nodeId" : "openEHR-EHR-SECTION.adhoc.v1",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "nb" : "ICD10"
+        },
+        "localizedDescriptions" : {
+          "nb" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
+        },
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']",
+        "children" : [ {
+          "id" : "forholdsregel",
+          "name" : "Forholdsregel",
+          "localizedName" : "Forholdsregel",
+          "rmType" : "EVALUATION",
+          "nodeId" : "openEHR-EHR-EVALUATION.precaution.v1",
+          "min" : 0,
+          "max" : -1,
+          "localizedNames" : {
+            "nb" : "Forholdsregel"
+          },
+          "localizedDescriptions" : {
+            "nb" : "En klinisk tilstand eller status som er unik eller særegen for et individ, og som regnes som viktig informasjon i forbindelse med beslutninger om behandling."
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']/items[openEHR-EHR-EVALUATION.precaution.v1]",
+          "children" : [ {
+            "id" : "tilstand_icd-10",
+            "name" : "Tilstand: ICD-10",
+            "localizedName" : "Tilstand: ICD-10",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0002",
+            "min" : 1,
+            "max" : 1,
+            "localizedNames" : {
+              "nb" : "Tilstand: ICD-10"
+            },
+            "localizedDescriptions" : {
+              "nb" : "Navnet på tilstanden eller statusen."
+            },
+            "annotations" : {
+              "comment" : "I strukturert kreftjournal er dette elementet koblet til et ICD-10 søk."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']/items[openEHR-EHR-EVALUATION.precaution.v1]/data[at0001]/items[at0002,'Tilstand: ICD-10']/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          }, {
+            "id" : "detaljer",
+            "name" : "Detaljer",
+            "localizedName" : "Detaljer",
+            "rmType" : "DV_TEXT",
+            "nodeId" : "at0003",
+            "min" : 0,
+            "max" : 1,
+            "localizedNames" : {
+              "nb" : "Detaljer"
+            },
+            "localizedDescriptions" : {
+              "nb" : "Beskrivelse av underlaget som understøtter forholdsregelen."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']/items[openEHR-EHR-EVALUATION.precaution.v1]/data[at0001]/items[at0003,'Detaljer']/value",
+            "inputs" : [ {
+              "type" : "TEXT"
+            } ]
+          }, {
+            "id" : "sist_oppdatert",
+            "name" : "Sist oppdatert",
+            "localizedName" : "Sist oppdatert",
+            "rmType" : "DV_DATE_TIME",
+            "nodeId" : "at0004",
+            "min" : 0,
+            "max" : 1,
+            "dependsOn" : [ "tilstand_icd-10", "detaljer" ],
+            "localizedNames" : {
+              "nb" : "Sist oppdatert"
+            },
+            "localizedDescriptions" : {
+              "nb" : "Dato da forholdsregelinformasjonen sist ble oppdatert."
+            },
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']/items[openEHR-EHR-EVALUATION.precaution.v1]/protocol[at0006]/items[at0004]/value",
+            "inputs" : [ {
+              "type" : "DATETIME"
+            } ]
+          }, {
+            "id" : "language",
+            "name" : "Language",
+            "rmType" : "CODE_PHRASE",
+            "min" : 1,
+            "max" : 1,
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']/items[openEHR-EHR-EVALUATION.precaution.v1]/language",
+            "inContext" : true
+          }, {
+            "id" : "encoding",
+            "name" : "Encoding",
+            "rmType" : "CODE_PHRASE",
+            "min" : 1,
+            "max" : 1,
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']/items[openEHR-EHR-EVALUATION.precaution.v1]/encoding",
+            "inContext" : true
+          }, {
+            "id" : "subject",
+            "name" : "Subject",
+            "rmType" : "PARTY_PROXY",
+            "min" : 1,
+            "max" : 1,
+            "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-SECTION.adhoc.v1,'ICD10']/items[openEHR-EHR-EVALUATION.precaution.v1]/subject",
+            "inputs" : [ {
+              "suffix" : "id",
+              "type" : "TEXT"
+            }, {
+              "suffix" : "id_scheme",
+              "type" : "TEXT"
+            }, {
+              "suffix" : "id_namespace",
+              "type" : "TEXT"
+            }, {
+              "suffix" : "name",
+              "type" : "TEXT"
+            } ],
+            "inContext" : true
+          } ]
+        } ]
+      }, {
+        "id" : "charlson_comorbidity_index_cci",
+        "name" : "Charlson Comorbidity Index (CCI)",
+        "localizedName" : "Charlson Comorbidity Index (CCI)",
+        "rmType" : "OBSERVATION",
+        "nodeId" : "openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2",
+        "min" : 0,
+        "max" : 1,
+        "localizedNames" : {
+          "nb" : "Charlson Comorbidity Index (CCI)"
+        },
+        "localizedDescriptions" : {
+          "nb" : "Et verktøy som brukes til å forutsi risikoen for død som følge av komorbide faktorer."
+        },
+        "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]",
+        "children" : [ {
+          "id" : "aldersgruppe",
+          "name" : "Aldersgruppe",
+          "localizedName" : "Aldersgruppe",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0061",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Aldersgruppe"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Alderskategorien til pasienten."
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0061]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0062",
+              "label" : "<50 år",
+              "localizedLabels" : {
+                "nb" : "<50 år"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0063",
+              "label" : "50-59 år",
+              "localizedLabels" : {
+                "nb" : "50-59 år"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0064",
+              "label" : "60-69 år",
+              "localizedLabels" : {
+                "nb" : "60-69 år"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0065",
+              "label" : "70-79 år",
+              "localizedLabels" : {
+                "nb" : "70-79 år"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 3
+            }, {
+              "value" : "at0066",
+              "label" : "≥80 år",
+              "localizedLabels" : {
+                "nb" : "≥80 år"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 4
+            } ]
+          } ]
+        }, {
+          "id" : "myokardinfarkt",
+          "name" : "Myokardinfarkt",
+          "localizedName" : "Myokardinfarkt",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0012",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Myokardinfarkt"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0012]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0013",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0014",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Tidligere diagnostisert eller sannsynlig hjerteinfarkt (EKG-forandringer og/eller enzymforandringer)."
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "kronisk_hjertesvikt",
+          "name" : "Kronisk hjertesvikt",
+          "localizedName" : "Kronisk hjertesvikt",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0009",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Kronisk hjertesvikt"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0009]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0010",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0011",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Anstrengelsesdyspné eller paroksysmal nattlig dyspné og har respondert symptomatisk (eller ved fysisk undersøkelse) på digitalis, diuretika eller midler som reduserer afterload."
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "perifere_vaskulære_sykdommer",
+          "name" : "Perifere vaskulære sykdommer",
+          "localizedName" : "Perifere vaskulære sykdommer",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0006",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Perifere vaskulære sykdommer"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0006]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0007",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0008",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Claudicatio intermittens, tidligere bypass på grunn av arteriell insuffisiens, tidligere gangren eller akutt arteriell insuffisiens, ubehandlet thorakalt og/eller abdominalt aneurisme (≥6 cm)."
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "cerebrovaskulær_hendelse",
+          "name" : "Cerebrovaskulær hendelse",
+          "localizedName" : "Cerebrovaskulær hendelse",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0015",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Cerebrovaskulær hendelse"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0015]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0016",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0017",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Cerebrovaskulær hendelse (CVA) eller transitorisk iskemisk anfall (TIA)."
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "demens",
+          "name" : "Demens",
+          "localizedName" : "Demens",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0018",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Demens"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0018]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0019",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0020",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Demens eller kronisk kognitiv svikt."
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "kronisk_lungesykdom",
+          "name" : "Kronisk lungesykdom",
+          "localizedName" : "Kronisk lungesykdom",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0021",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Kronisk lungesykdom"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0021]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0022",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0023",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Mild, moderat eller alvorlig kronisk lungesykdom."
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "ulcussykdom",
+          "name" : "Ulcussykdom",
+          "localizedName" : "Ulcussykdom",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0024",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Ulcussykdom"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0024]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0025",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0026",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Enhver behandling av magesårsykdom, blødende magesår, eller tidligere transfusjonskrevende behandling av gastrointestinal blødning."
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "leversykdom",
+          "name" : "Leversykdom",
+          "localizedName" : "Leversykdom",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0027",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Leversykdom"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0027]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0028",
+              "label" : "Ingen",
+              "localizedLabels" : {
+                "nb" : "Ingen"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0029",
+              "label" : "Mild",
+              "localizedLabels" : {
+                "nb" : "Mild"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Cirrhose uten portal hypertensjon eller kronisk hepatitt."
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0067",
+              "label" : "Moderat til alvorlig",
+              "localizedLabels" : {
+                "nb" : "Moderat til alvorlig"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Moderat: Cirrhose med portal hypertensjon, men uten blødning. Alvorlig: Cirrhose med portal hypertensjon og variceblødning."
+              },
+              "ordinal" : 3
+            } ]
+          } ]
+        }, {
+          "id" : "bindevevssykdom",
+          "name" : "Bindevevssykdom",
+          "localizedName" : "Bindevevssykdom",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0030",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Bindevevssykdom"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0030]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0031",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0032",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 1
+            } ]
+          } ]
+        }, {
+          "id" : "diabetes",
+          "name" : "Diabetes",
+          "localizedName" : "Diabetes",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0033",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Diabetes"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0033]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0034",
+              "label" : "Ingen eller diettkontrollert",
+              "localizedLabels" : {
+                "nb" : "Ingen eller diettkontrollert"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0035",
+              "label" : "Ukomplisert",
+              "localizedLabels" : {
+                "nb" : "Ukomplisert"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Diabetes behandlet med insulin eller orale hypoglykemiske midler, men ikke diett alene."
+              },
+              "ordinal" : 1
+            }, {
+              "value" : "at0068",
+              "label" : "Organskade",
+              "localizedLabels" : {
+                "nb" : "Organskade"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Diabetes med endeorganskade."
+              },
+              "ordinal" : 2
+            } ]
+          } ]
+        }, {
+          "id" : "hemiplegi",
+          "name" : "Hemiplegi",
+          "localizedName" : "Hemiplegi",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0036",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Hemiplegi"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0036]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0037",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0038",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 2
+            } ]
+          } ]
+        }, {
+          "id" : "moderat_til_alvorlig_nyresykdom",
+          "name" : "Moderat til alvorlig nyresykdom",
+          "localizedName" : "Moderat til alvorlig nyresykdom",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0039",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Moderat til alvorlig nyresykdom"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0039]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0040",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0041",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Moderat: kreatinin >3 mg/dL (0,27 mmol/L). Alvorlig: i dialyse, er transplantert, har uremi."
+              },
+              "ordinal" : 2
+            } ]
+          } ]
+        }, {
+          "id" : "solid_svulst",
+          "name" : "Solid svulst",
+          "localizedName" : "Solid svulst",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0045",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Solid svulst"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0045]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0046",
+              "label" : "Ingen",
+              "localizedLabels" : {
+                "nb" : "Ingen"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0048",
+              "label" : "Lokalisert",
+              "localizedLabels" : {
+                "nb" : "Lokalisert"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Solid tumor uten dokumenterte metastaser."
+              },
+              "ordinal" : 2
+            }, {
+              "value" : "at0069",
+              "label" : "Metastatisk",
+              "localizedLabels" : {
+                "nb" : "Metastatisk"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Metastatisk solid tumor."
+              },
+              "ordinal" : 6
+            } ]
+          } ]
+        }, {
+          "id" : "leukemi",
+          "name" : "Leukemi",
+          "localizedName" : "Leukemi",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0047",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Leukemi"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0047]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0049",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0051",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 2
+            } ]
+          } ]
+        }, {
+          "id" : "lymfom",
+          "name" : "Lymfom",
+          "localizedName" : "Lymfom",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0050",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Lymfom"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0050]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0052",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0053",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 2
+            } ]
+          } ]
+        }, {
+          "id" : "aids",
+          "name" : "AIDS",
+          "localizedName" : "AIDS",
+          "rmType" : "DV_ORDINAL",
+          "nodeId" : "at0060",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "AIDS"
+          },
+          "localizedDescriptions" : {
+            "nb" : ""
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0060]/value",
+          "inputs" : [ {
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "at0070",
+              "label" : "Nei",
+              "localizedLabels" : {
+                "nb" : "Nei"
+              },
+              "localizedDescriptions" : {
+                "nb" : ""
+              },
+              "ordinal" : 0
+            }, {
+              "value" : "at0071",
+              "label" : "Ja",
+              "localizedLabels" : {
+                "nb" : "Ja"
+              },
+              "localizedDescriptions" : {
+                "nb" : "Bekreftet AIDS eller sannsynlig AIDS ved for eksempel påvist AIDS-relatert tilstand."
+              },
+              "ordinal" : 6
+            } ]
+          } ]
+        }, {
+          "id" : "cci_totalskår",
+          "name" : "CCI totalskår",
+          "localizedName" : "CCI totalskår",
+          "rmType" : "DV_COUNT",
+          "nodeId" : "at0072",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "CCI totalskår"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Summen av poeng for hver enkelt parameter i Charlson Comorbidity Index."
+          },
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/data[at0003]/items[at0072]/value",
+          "inputs" : [ {
+            "type" : "INTEGER"
+          } ]
+        }, {
+          "id" : "time",
+          "name" : "Time",
+          "rmType" : "DV_DATE_TIME",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/data[at0001]/events[at0002]/time",
+          "inputs" : [ {
+            "type" : "DATETIME"
+          } ],
+          "inContext" : true
+        }, {
+          "id" : "language",
+          "name" : "Language",
+          "rmType" : "CODE_PHRASE",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/language",
+          "inContext" : true
+        }, {
+          "id" : "encoding",
+          "name" : "Encoding",
+          "rmType" : "CODE_PHRASE",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/encoding",
+          "inContext" : true
+        }, {
+          "id" : "subject",
+          "name" : "Subject",
+          "rmType" : "PARTY_PROXY",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-SECTION.adhoc.v1,'Komorbiditet_utredning']/items[openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2]/subject",
+          "inputs" : [ {
+            "suffix" : "id",
+            "type" : "TEXT"
+          }, {
+            "suffix" : "id_scheme",
+            "type" : "TEXT"
+          }, {
+            "suffix" : "id_namespace",
+            "type" : "TEXT"
+          }, {
+            "suffix" : "name",
+            "type" : "TEXT"
+          } ],
+          "inContext" : true
+        } ]
+      } ]
+    }, {
+      "id" : "tidfestet_fritekst",
+      "name" : "Tidfestet fritekst",
+      "localizedName" : "Tidfestet fritekst",
+      "rmType" : "OBSERVATION",
+      "nodeId" : "openEHR-EHR-OBSERVATION.progress_note.v1",
+      "min" : 0,
+      "max" : 1,
+      "localizedNames" : {
+        "nb" : "Tidfestet fritekst"
+      },
+      "localizedDescriptions" : {
+        "nb" : "Fritekstbeskrivelse av et individs helserelaterte hendelser på et spesifikt tidspunkt, sett fra helsepersonellets synsvinkel."
+      },
+      "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]",
+      "children" : [ {
+        "id" : "uspesifisert_hendelse",
+        "name" : "Uspesifisert hendelse",
+        "localizedName" : "Uspesifisert hendelse",
+        "rmType" : "EVENT",
+        "nodeId" : "at0002",
+        "min" : 0,
+        "max" : -1,
+        "localizedNames" : {
+          "nb" : "Uspesifisert hendelse"
+        },
+        "localizedDescriptions" : {
+          "nb" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i en template eller i en applikasjon."
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/data[at0001]/events[at0002]",
+        "children" : [ {
+          "id" : "tidfestet_fritekst",
+          "name" : "Tidfestet fritekst",
+          "localizedName" : "Tidfestet fritekst",
+          "rmType" : "DV_TEXT",
+          "nodeId" : "at0004",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Tidfestet fritekst"
+          },
+          "localizedDescriptions" : {
+            "nb" : "Fritekstbeskrivelse av helserelaterte hendelser, status, funn eller oppfatninger på et spesifikt tidspunkt."
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/data[at0001]/events[at0002]/data[at0003]/items[at0004]/value",
+          "inputs" : [ {
+            "type" : "TEXT"
+          } ]
+        }, {
+          "id" : "time",
+          "name" : "Time",
+          "rmType" : "DV_DATE_TIME",
+          "min" : 1,
+          "max" : 1,
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/data[at0001]/events[at0002]/time",
+          "inputs" : [ {
+            "type" : "DATETIME"
+          } ],
+          "inContext" : true
+        } ]
+      }, {
+        "id" : "semistrukturert_metadata_dips",
+        "name" : "Semistrukturert metadata dips",
+        "localizedName" : "Semistrukturert metadata dips",
+        "rmType" : "CLUSTER",
+        "nodeId" : "openEHR-EHR-CLUSTER.semistrukturert_metadata_dips.v1",
+        "min" : 0,
+        "max" : 1,
+        "dependsOn" : [ "uspesifisert_hendelse" ],
+        "localizedNames" : {
+          "nb" : "Semistrukturert metadata dips"
+        },
+        "localizedDescriptions" : {
+          "nb" : "Semistrukturert metadata dips"
+        },
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/protocol[at0005]/items[openEHR-EHR-CLUSTER.semistrukturert_metadata_dips.v1]",
+        "children" : [ {
+          "id" : "klassifisering_av_informasjon",
+          "name" : "Klassifisering av informasjon",
+          "localizedName" : "Klassifisering av informasjon",
+          "rmType" : "DV_CODED_TEXT",
+          "nodeId" : "at0001",
+          "min" : 0,
+          "max" : 1,
+          "localizedNames" : {
+            "nb" : "Klassifisering av informasjon"
+          },
+          "localizedDescriptions" : {
+            "nb" : "*"
+          },
+          "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/protocol[at0005]/items[openEHR-EHR-CLUSTER.semistrukturert_metadata_dips.v1]/items[at0001]/value",
+          "inputs" : [ {
+            "suffix" : "code",
+            "type" : "CODED_TEXT",
+            "list" : [ {
+              "value" : "10-SammendragAvKomorbiditet",
+              "label" : "Sammendrag av komorbiditet",
+              "localizedLabels" : {
+                "nb" : "Sammendrag av komorbiditet"
+              }
+            } ],
+            "terminology" : "no.dips.Freetext.Classification"
+          } ]
+        } ]
+      }, {
+        "id" : "language",
+        "name" : "Language",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/language",
+        "inContext" : true
+      }, {
+        "id" : "encoding",
+        "name" : "Encoding",
+        "rmType" : "CODE_PHRASE",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/encoding",
+        "inContext" : true
+      }, {
+        "id" : "subject",
+        "name" : "Subject",
+        "rmType" : "PARTY_PROXY",
+        "min" : 1,
+        "max" : 1,
+        "aqlPath" : "/content[openEHR-EHR-OBSERVATION.progress_note.v1]/subject",
+        "inputs" : [ {
+          "suffix" : "id",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_scheme",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "id_namespace",
+          "type" : "TEXT"
+        }, {
+          "suffix" : "name",
+          "type" : "TEXT"
+        } ],
+        "inContext" : true
+      } ]
+    }, {
+      "id" : "category",
+      "rmType" : "DV_CODED_TEXT",
+      "nodeId" : "",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/category",
+      "inputs" : [ {
+        "suffix" : "code",
+        "type" : "CODED_TEXT",
+        "list" : [ {
+          "value" : "433",
+          "label" : "event",
+          "localizedLabels" : {
+            "nb" : ""
+          }
+        } ],
+        "terminology" : "openehr"
+      } ],
+      "inContext" : true
+    }, {
+      "id" : "language",
+      "name" : "Language",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/language",
+      "inContext" : true
+    }, {
+      "id" : "territory",
+      "name" : "Territory",
+      "rmType" : "CODE_PHRASE",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/territory",
+      "inContext" : true
+    }, {
+      "id" : "composer",
+      "name" : "Composer",
+      "rmType" : "PARTY_PROXY",
+      "min" : 1,
+      "max" : 1,
+      "aqlPath" : "/composer",
+      "inputs" : [ {
+        "suffix" : "id",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_scheme",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "id_namespace",
+        "type" : "TEXT"
+      }, {
+        "suffix" : "name",
+        "type" : "TEXT"
+      } ],
+      "inContext" : true
+    } ]
+  }
+}
