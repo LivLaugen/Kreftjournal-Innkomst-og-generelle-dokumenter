@@ -1,5 +1,5 @@
 = Klinisk kontakt
-
+:toc:
 
 == Metadata
 
@@ -12,7 +12,7 @@ Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
 
 
 
-:toc:
+
 
 
 
@@ -233,4 +233,5 @@ a|
 |====
 // Not supported rmType CODE_PHRASE
 // Not supported rmType CODE_PHRASE
+
 // Not supported rmType PARTY_PROXY
