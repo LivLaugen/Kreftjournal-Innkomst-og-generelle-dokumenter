@@ -1,9 +1,8 @@
-archetype (adl_version=1.4; uid=01569dc2-43f4-46f8-9ab8-62c87ea739f4)
+﻿archetype (adl_version=1.4; uid=3bba47ec-ca74-434f-b0db-1257dbf945b8)
 	openEHR-EHR-OBSERVATION.charlson_comorbidity_index.v2
 
 concept
-	[at0000]
-
+	[at0000]	-- Charlson Comorbidity Index (CCI)
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -25,21 +24,16 @@ language
 			accreditation = <"Santiago Frid, Spain, frid@clinic.cat">
 		>
 	>
-
 description
 	original_author = <
 		["name"] = <"Liv Laugen">
 		["organisation"] = <"Oslo universitetssykehus">
 		["email"] = <"liv.laugen@ous-hf.no">
 	>
-	lifecycle_state = <"published">
-	other_contributors = <"Stein Arne Rimehaug, Sunnaas sykehus, Norway","Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)","Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)","SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India","Hugo Claudio Briceño García, Catsalut, Spain","Ian Bull, ACT Health, Australia","Stefan Dubois, Dep't of Pathology and Genetics, University Hospitals of Lund and Malmö, Sweden","Heather Grain, Llewelyn Grain Informatics, Australia","Mikkel Johan Gaup Grønmo, Helse Nord IKT, Norway (openEHR Editor)","Elin Hallan Naderi, OUS, Norway","Amanda Herbrand, University Hospital Basel, Switzerland","Evelyn Hovenga, EJSH Consulting, Australia","Anjali Kulkarni, Karkinos, India","Jörgen Kuylenstierna, eWeave AB, Sweden","Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)","Darin Leonhardt, PLRI, Germany","Heather Leslie, Atomica Informatics, Australia (openEHR Editor)","Michael Lutz, BITsoft, Germany","Terje Nordberg, Helse Bergen, Norway","Mikael Nyström, Cambio Healthcare Systems AB, Sweden","Bjørn Næss, DIPS ASA, Norway","Helge Pettersen, Helse Bergen, Norway","Ragnhild Schultz, OUS, Norway","Benjamin Senst, Germany","Natalia Strauch, Medizinische Hochschule Hannover, Germany","Olav Thorsen, Stavanger University Hospital, Norway","John Tore Valand, Helse Bergen, Norway (openEHR Editor)","Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)","Henriette Krogh, Helsedirektoratet, Norway","Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)">
 	details = <
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere resultatet for hver komponentparameter i Charlson Comorbidity Index (CCI) og dens totale sum, og for å beregne estimert overlevelsesrate etter 10 år.">
-			keywords = <"CCI","komorbiditet","samtidige tilstander","estimert overlevelse","dødelighet","multimorbiditet","risiko","prognose","risikovurdering">
-			copyright = <"© openEHR Foundation">
 			use = <"Brukes for å registrere resultatet for hver komponentparameter i Charlson Comorbidity Index (CCI) og dens totale sum, og for å beregne estimert overlevelsesrate etter 10 år.
 
 Datasettet og tilhørende verdier er fra den opprinnelige Charlson-studien i 1987.
@@ -47,27 +41,34 @@ Datasettet og tilhørende verdier er fra den opprinnelige Charlson-studien i 198
 I den originale artikkelen var det listet opp 19 tilstander, hvor flere hadde separate representasjoner av samme tilstand, men med ulik alvorlighetsgrad. I denne arketypen har disse tilstandene blitt gruppert sammen - for eksempel er de to tilstandene \"Mild leversykdom\" og \"Moderat til alvorlig leversykdom\" verdier gruppert under tilstanden \"Leversykdom\". Som et resultat er bare 16 tilstander representert i denne arketypen
 
 Notat: Per dags dato finnes det ingen validert norsk oversettelse av verktøyet. Denne oversettelsen av arketypen er basert på ordlyden i diverse skjema på norsk og ved bruk av medisinske ordbøker og tilbakemeldinger fra den norske høringen av arketypen.">
+			keywords = <"CCI", "komorbiditet", "samtidige tilstander", "estimert overlevelse", "dødelighet", "multimorbiditet", "risiko", "prognose", "risikovurdering">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record the result for each component parameter of the Charlson Comorbidity Index (CCI) and its total sum, and to calculate the 10 year estimated survival.">
-			keywords = <"CCI","comorbidity","concurrent conditions","estimated survival","mortality","prognosis","assessment","risk">
-			copyright = <"© openEHR Foundation">
 			use = <"To record the result for each component parameter of the Charlson Comorbidity Index (CCI) and its total sum, and to calculate the 10 year estimated survival.
 
 This data and value set is from the original Charlson et al study in 1987.
 In the original paper, 19 'conditions' were represented, including a number that had separate representations of the same condition, but with different severity. In this archetype, these conditions have been grouped together - for example, 'Mild liver disease' and 'Moderate to severe liver disease' are values under the condition 'Liver disease'. As a result, there are only 16 conditions represented in this archetype.">
+			keywords = <"CCI", "comorbidity", "concurrent conditions", "estimated survival", "mortality", "prognosis", "assessment", "risk">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
 		>
 		["es"] = <
 			language = <[ISO_639-1::es]>
 			purpose = <"Registrar el resultado para cada parámetro componente del Índice de Comorbilidad de Charlson (CCI) y su suma total, y calcular la supervivencia estimada a 10 años.">
-			keywords = <"CCI","comorbilidad","condiciones concurrentes","supervivencia estimada","mortalidad","pronóstico","evaluación","riesgo">
 			use = <"Registrar el resultado para cada parámetro componente del Índice de Comorbilidad de Charlson (CCI) y su suma total, y calcular la supervivencia estimada a 10 años.
 
 Estos datos y el conjunto de valores provienen del estudio original de Charlson y colaboradores en 1987.
 En el artículo original, se representaron 19 'enfermedades', incluyendo varias que tenían representaciones separadas de la misma condición, pero con diferente gravedad. En este arquetipo, estas condiciones se han agrupado juntas, por ejemplo, 'Enfermedad hepática leve' y 'Enfermedad hepática moderada a grave' son valores bajo la condición 'Enfermedad hepática'. Como resultado, este arquetipo representa solo 16 condiciones.">
+			keywords = <"CCI", "comorbilidad", "condiciones concurrentes", "supervivencia estimada", "mortalidad", "pronóstico", "evaluación", "riesgo">
+			misuse = <"">
 		>
 	>
+	lifecycle_state = <"published">
+	other_contributors = <"Stein Arne Rimehaug, Sunnaas sykehus, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Hugo Claudio Briceño García, Catsalut, Spain", "Ian Bull, ACT Health, Australia", "Stefan Dubois, Dep't of Pathology and Genetics, University Hospitals of Lund and Malmö, Sweden", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Helse Nord IKT, Norway (openEHR Editor)", "Elin Hallan Naderi, OUS, Norway", "Amanda Herbrand, University Hospital Basel, Switzerland", "Evelyn Hovenga, EJSH Consulting, Australia", "Anjali Kulkarni, Karkinos, India", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Darin Leonhardt, PLRI, Germany", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Michael Lutz, BITsoft, Germany", "Terje Nordberg, Helse Bergen, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Helge Pettersen, Helse Bergen, Norway", "Ragnhild Schultz, OUS, Norway", "Benjamin Senst, Germany", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Olav Thorsen, Stavanger University Hospital, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Henriette Krogh, Helsedirektoratet, Norway", "Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -75,8 +76,8 @@ En el artículo original, se representaron 19 'enfermedades', incluyendo varias 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"561BF3A2A7B4E4597DB7649EB9EA0338">
-		["build_uid"] = <"27af0efe-1f5d-4569-b2cb-7bf84425dcba">
+		["MD5-CAM-1.0.1"] = <"2BE8724AC5D59132F1D82C66EF12D370">
+		["build_uid"] = <"b82835ec-7181-4c0b-aa6a-89399d1a6e5f">
 		["revision"] = <"2.0.0">
 	>
 
@@ -233,6 +234,7 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["nb"] = <
@@ -252,10 +254,6 @@ ontology
 				["at0003"] = <
 					text = <"Tree">
 					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"ITEM_TREE">
-					description = <"">
 				>
 				["at0006"] = <
 					text = <"Perifere vaskulære sykdommer">
@@ -339,7 +337,7 @@ ontology
 				>
 				["at0026"] = <
 					text = <"Ja">
-					description = <"Enhver behandling av magesårsykdom, blødende magesår, eller tidligere transfusjonskrevende behandling av gastrointestinal blødning.">
+					description = <"Enhver behandling av magesårsykdom, blødende magesår,  eller tidligere transfusjonskrevende behandling av gastrointestinal blødning.">
 				>
 				["at0027"] = <
 					text = <"Leversykdom">
@@ -374,7 +372,7 @@ ontology
 					description = <"">
 				>
 				["at0035"] = <
-					text = <"Ukomplisert">
+					text = <"Ukompliser">
 					description = <"Diabetes behandlet med insulin eller orale hypoglykemiske midler, men ikke diett alene.">
 				>
 				["at0036"] = <
@@ -497,6 +495,10 @@ ontology
 					text = <"Tilleggsinformasjon">
 					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
 					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR.">
+				>
+				["at0004"] = <
+					text = <"ITEM_TREE">
+					description = <"">
 				>
 			>
 		>
