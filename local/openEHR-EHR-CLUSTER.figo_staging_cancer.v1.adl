@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=f337cd9a-1229-4433-9e4b-67d8a86bbead)
+﻿archetype (adl_version=1.4; uid=c9bad5a3-fdff-43ed-9c5b-add7128115f6)
 	openEHR-EHR-CLUSTER.figo_staging_cancer.v1
 
 concept
@@ -51,13 +51,11 @@ Not to be used for recording non-FIGO classifications of gynaecological cancer."
 		>
 	>
 	lifecycle_state = <"published">
-	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (Nasjonal IKT redaktør)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Hanne Marte Bårholm, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Mona Didriksen, Helse Vest IKT, Norway", "Mari Bunkholt Elstrand, OUS-HF, Norway", "Ciprian Gerstenberger, HN IKT, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Hans Kristian Haugland, Helse Bergen, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Nina Louise Jebsen, Haukeland Universitetssykehus, Norway", "June Marie Knappskog, Helse Nord IKT AS, Norway (Nasjonal IKT redaktør)", "Kanika Kuwelker, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Eli Larsen, UNN, Norway", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Jonas Lyshaug, FSE/ HN IKT, Norway", "June Marie Nepstad Knappskog, Helse Nord IKT AS, Norway (Nasjonal IKT redaktør)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Olha Nikolaieva, University Hospital Basel, Switzerland", "Terje Nordberg, Helse Bergen, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Marlene Pérez Colman, Digital Health and Care Wales, United Kingdom", "Kanthan Theivendran, NHS, United Kingdom", "John Tore Valand, Helse Vest IKT, Norway (Nasjonal IKT redaktør)">
+	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Ivar Berge, Oslo University Hospital, Norway (openEHR Editor)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Mari Bunkholt Elstrand, OUS-HF, Norway", "Hanne Marte Bårholm, Helse Vest IKT, Norway (openEHR Editor)", "Mona Didriksen, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Ciprian Gerstenberger, Helse Nord IKT, Norway (openEHR Editor)", "Heather Grain, Llewelyn Grain Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "June Marie Nepstad Knappskog, Helse Nord IKT AS, Norway (openEHR Editor), Norway (openEHR Editor)", "Kanika Kuwelker, Helse Vest IKT, Norway (openEHR Editor)", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Eli Larsen, UNN, Norway (openEHR Editor)", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Nina Louise Jebsen, Haukeland Universitetssykehus, Norway", "Jonas Lyshaug, FSE/ HN IKT, Norway", "June Marie Knappskog, Helse Nord IKT AS, Norway (Nasjonal IKT redaktør), Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Olha Nikolaieva, University Hospital Basel, Switzerland", "Terje Nordberg, Helse Bergen, Norway", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Bjørn Næss, DIPS ASA, Norway", "Marlene Pérez Colman, Digital Health and Care Wales, United Kingdom", "Kanthan Theivendran, NHS, United Kingdom", "John Tore Valand, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"FIGO staging of gynaecological cancer, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2025-05-15]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.7610
-
-Berek JS, Matias-Guiu X, Creutzberg C, Fotopoulou C, Gaffney D, Kehoe S, Lindemann K, Mutch D, Concin N; Endometrial Cancer Staging Subcommittee, FIGO Women's Cancer Committee. FIGO staging of endometrial cancer: 2023. Int J Gynaecol Obstet. 2023 Aug;162(2):383-394. doi: 10.1002/ijgo.14923. Epub 2023 Jun 20. Erratum in: Int J Gynaecol Obstet. 2023 Oct 6. doi: 10.1002/ijgo.15193. PMID: 37337978.
+		["references"] = <"Berek JS, Matias-Guiu X, Creutzberg C, Fotopoulou C, Gaffney D, Kehoe S, Lindemann K, Mutch D, Concin N; Endometrial Cancer Staging Subcommittee, FIGO Women's Cancer Committee. FIGO staging of endometrial cancer: 2023. Int J Gynaecol Obstet. 2023 Aug;162(2):383-394. doi: 10.1002/ijgo.14923. Epub 2023 Jun 20. Erratum in: Int J Gynaecol Obstet. 2023 Oct 6. doi: 10.1002/ijgo.15193. PMID: 37337978.
 
 Berek JS, Renz M, Kehoe S, Kumar L, Friedlander M. Cancer of the ovary, fallopian tube, and peritoneum: 2021 update. Int J Gynaecol Obstet. 2021 Oct;155 Suppl 1(Suppl 1):61-85. doi: 10.1002/ijgo.13878. PMID: 34669199; PMCID: PMC9298325.
 
@@ -71,8 +69,8 @@ Ray-Coquard I, Casali PG, Croce S, Fennessy FM, Fischerova D, Jones R, Sanfilipp
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"47AB381BAFD9CB65BAE38B0E556B6C31">
-		["build_uid"] = <"922c202b-eca6-424e-93b8-c7da13b5773d">
+		["MD5-CAM-1.0.1"] = <"6BCBCF64D3FCE67A6BCC6579AC43F759">
+		["build_uid"] = <"4cd7f50e-ad38-4aad-8025-8f22813603ba">
 		["revision"] = <"1.0.0">
 	>
 
@@ -118,7 +116,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
