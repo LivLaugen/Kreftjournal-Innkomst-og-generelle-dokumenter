@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=132c4b84-79ae-4424-ae31-cc153b25c9e5)
+﻿archetype (adl_version=1.4; uid=92656df6-9402-478d-a50d-8655d94f8778)
 	openEHR-EHR-OBSERVATION.ecog.v2
 
 concept
@@ -166,8 +166,8 @@ Nasjonale anbefalinger og krav. (2025). Helsedirektoratet. https://www.helsedire
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"281BA813E6A9E0CBC68E119C8D3DF791">
-		["build_uid"] = <"514e0c03-7f15-4e6c-9e06-6bdf775be021">
+		["MD5-CAM-1.0.1"] = <"77BA3C6A5E47F40DA3CD8DC839CE6787">
+		["build_uid"] = <"ee9e6c2a-619b-4b80-8c33-342b5d132556">
 		["revision"] = <"2.0.0">
 	>
 
@@ -208,7 +208,6 @@ definition
 			}
 		}
 	}
-
 
 
 ontology
