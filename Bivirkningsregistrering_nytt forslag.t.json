@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "a3f446a2a1d2eed240932e97adb20ee2",
-      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298"
+      "MD5-CAM-1.0.1" : "ddad95a63430756c0f8fc44cf3c6db7f",
+      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
+      "sem_ver" : "1.0.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -324,7 +326,12 @@
           "text" : "Bivirkningsregistrering",
           "description" : "Un en-tête de section générique qui doit être renommé dans un modèle pour s'adapter à un contexte clinique spécifique."
         }
-      }
+      },
+      "ca" : { },
+      "es" : { },
+      "pt-pt" : { },
+      "pt" : { },
+      "tr" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -440,6 +447,21 @@
           "misuse" : "No utilitzar per a registrar detalls sobre la presència o absència d'un problema o diagnòstic fora del context de l'objectiu de detecció. Utilitzar EVALUATION.problem_diagnosis o EVALUATION.exclusion_specific per aquest propòsit. \r\n\r\nNo utilitzar per a crear una infraestructura per a registrar respostes a les preguntes de detecció predefinides sobre els procediments que s'han realitzat en el passat. Utilitzar OBSERVATION.procedure_screening per aquest propòsit. \r\n\r\nNo utilitzar per a crear una infraestructura per a registrar respostes a les preguntes de detecció predefinides sobre reaccions adverses. Utilitzar un arquetip apropiat per aquest propòsit. \r\n\r\nNo utilitzar per a registrar dades sobre una llista de selecció simple on una pregunta es pot enregistrar tant com \"\"present\"\" o \"\"indeterminada\"\". Utilitzar OBSERVATION.selection_list per aquest propòsit.",
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Crear una infraestructura para registrar respuestas a las preguntas de detección predefinidas sobre cuestiones, problemas o diagnósticos.",
+          "keywords" : [ "Condición, estado, enfermedad, síndrome, cuestionario, cribaje, detección, cuestión" ],
+          "use" : "Utilizar para crear una infraestructura para registrar respuestas en las preguntas de detección predefinidas sobre cuestiones, problemas o diagnósticos. Este arquetipo se ha moldeado deliberadamente de forma flexible para poder incluir un rango lo más amplio posible de cuestiones y preguntas, así como de diagnósticos.\r\n\r\nLos casos de uso más frecuentes, pero no limitados, a:\r\n\r\n-Preguntar sistemáticamente en cualquier consulta. Por ejemplo:\r\n\r\n---¿Diagnosticado con cáncer? Sí, No, Desconocido.\r\n\r\n---¿Diagnosticado con COVID-19 o gripe en los últimos doce meses? Sí, No, Desconocido.\r\n\r\n---¿Tiene alguna preocupación? Sí, No, Desconocido.\r\n\r\n-Cuestionario específico relacionado con la vigilancia de enfermedades.\r\n\r\nLa semántica de este arquetipo es intencionalmente laxa, y consultar este arquetipo solo será útil o seguro dentro del contexto de cada plantilla específica. En una plantilla, cada elemento de datos normalmente se volverá a nombrar con una pregunta específica. Cuando se haya propuesto los conjuntos de valores por casos de uso común, estos pueden adaptarse para su uso local utilizando DV_TEXT o DV_BOOLEAN para ajustarse a cada caso de uso específico.\r\n\r\nLa estructura EVENT del modelo de referencia se puede utilizar para especificar si las preguntas están relacionadas con un momento dado o a un período de tiempo. Utilizar una instancia separada de este arquetipo para distinguir entre un cuestionario que registra información sobre un procedimiento realizado en cualquier momento del pasado y la información sobre un procedimiento dentro de un intervalo de tiempo específico. Por ejemplo, la diferencia entre “¿Usted tiene gripe?”, comparado con “¿Usted ha tenido gripe en las últimas 4 semanas?”\r\n\r\nLa fuente de información en una respuesta del cuestionario puede variar en diferentes contextos, pero puede identificarse utilizando el elemento 'Information provider' (Proveedor de información) del Modelo de Referencia.\r\n\r\nEste arquetipo se ha diseñado para utilizarlo como herramienta de detección o para registrar datos sencillos en formato de cuestionario para su uso en situaciones como un registro de enfermedades. Si el cuestionario de detección identifica la presencia de un problema o diagnóstico, se recomienda que se registre el sistema clínico y continúe los detalles específicos sobre el problema o diagnóstico (como la fecha de reconocimiento clínico), utilizando el arquetipo EVALUATION.problem_diagnosis.",
+          "misuse" : "No utilizar para registrar detalles sobre la presencia o ausencia de un problema o diagnóstico, fuera de un contexto de cribado. Para estos fines, utilizar EVALUATION.problem_diagnosis o EVALUATION.exclusion_specific.\r\n\r\nNo utilizar para crear un marco para registrar respuestas a preguntas de cribado predefinidas sobre procedimientos realizados en el pasado. Para este propósito, utilizar OBSERVATION.procedure_screening.\r\n\r\nNo utilizar para crear un marco para registrar respuestas a preguntas de cribado predefinidas sobre reacciones adversas; utilizar un arquetipo apropiado para este propósito.\r\n\r\nNo utilizar para registrar detalles sobre una lista de selección simple en la que una pregunta pueda registrarse como \"presente\" o \"indeterminada\". Para ello, utilice OBSERVATION.selection_list.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -538,7 +560,7 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..1",
+                      "occurrences" : "0..0",
                       "nodeId" : "at0022.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -978,6 +1000,20 @@
           "ac0.210" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
+            "code" : "ac0.210",
+            "description" : ""
+          }
+        },
+        "es" : {
+          "ac0.202" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.202",
+            "description" : ""
+          },
+          "ac0.210" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
             "code" : "ac0.210",
             "description" : ""
           }
@@ -2095,6 +2131,22 @@
       "otherDetails" : {
         "other_contributors" : "Servei Català de la Salut"
       }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Laura Moral Lopez",
+        "organisation" : "Sistema de Salut de Catalunya",
+        "email" : "lauramoral@catsalut.cat"
+      },
+      "otherDetails" : {
+        "other_contributors" : "Tradcrea"
+      }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -2288,6 +2340,36 @@
           "keywords" : [ ],
           "originalResourceUri" : { },
           "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Pour enregistrer des informations détaillées sur un problème de santé spécifique identifié ou sur un diagnostic particulier.\r\n\r\nLa définition d’un problème de santé est délibérément laissée ouverte dans le contexte de la documentation clinique, afin de recenser toute préoccupation, réelle ou perçue, susceptible d’affecter négativement, à quelque degré que ce soit, le bien-être d’une personne. Un problème de santé peut être identifié par la personne concernée, un proche ou un professionnel de santé. En revanche, un diagnostic est défini de manière plus précise sur la base de critères cliniques objectifs et n’est généralement établi que par un professionnel de santé.",
+          "keywords" : [ "problématique", "affection", "problème", "diagnostic", "préoccupation", "blessure", "impression clinique" ],
+          "use" : "À utiliser pour enregistrer des informations détaillées sur un problème de santé spécifique identifié ou sur un diagnostic particulier. \r\n\r\nIl est pratiquement impossible, dans la réalité, d’établir des définitions claires permettant de différencier un « problème » d’un « diagnostic » : nous ne pouvons pas déterminer de manière fiable à quel moment un problème doit être considéré comme un diagnostic. Lorsque les critères de diagnostic ou de classification sont remplis, on peut alors qualifier en toute confiance la condition de « diagnostic formel » ; mais avant que ces conditions ne soient remplies et tant qu’il existe des éléments probants à l’appui, il peut également être valable d’utiliser le terme « diagnostic ». La quantité d’éléments probants requise pour attribuer l’étiquette de « diagnostic » n’est pas facile à définir et, en réalité, varie probablement d’une condition à l’autre. De nombreux comités de normalisation se penchent depuis des années sur ce casse-tête définitionnel sans parvenir à une résolution claire.\r\n\r\nAux fins de la documentation clinique avec cet archétype, le « problème » et le « diagnostic » sont considérés comme un continuum, les niveaux croissants de détail et de preuves à l’appui conférant généralement plus de poids à l’étiquette de « diagnostic ». Dans cet archétype, il n’est pas nécessaire de classer l’affection comme un « problème » ou un « diagnostic ». Les exigences en matière de données pour justifier l'un ou l'autre sont identiques, une structure de données supplémentaire étant requise pour permettre l’intégration des preuves si et quand celles-ci deviennent disponibles. Parmi les exemples de problèmes, on peut citer : le souhait exprimé par la personne de perdre du poids, sans pour autant qu’il y ait de diagnostic formel d’obésité ; ou un problème relationnel avec un membre de la famille. Parmi les exemples de diagnostics formels, on peut citer un cancer soutenu par des antécédents médicaux, des résultats d’examen, des résultats histopathologiques et radiologiques, et qui répond à toutes les exigences des critères diagnostiques connus. Dans la pratique, la plupart des problèmes ou des diagnostics ne se situent pas à l’une ou l’autre extrémité du spectre problème-diagnostic, mais quelque part entre les deux.\r\n\r\nCet archétype peut être utilisé dans de nombreux contextes. Par exemple, pour enregistrer un problème ou un diagnostic clinique lors d’une consultation ; pour alimenter une liste de problèmes persistants ; ou pour fournir un résumé dans un document de compte rendu de sortie.\r\n\r\nDans la pratique, les cliniciens utilisent de nombreux qualificatifs spécifiques au contexte, tels que passé/présent, primaire/secondaire, actif/inactif, admission/sortie, etc. Les contextes peuvent être spécifiques à un lieu, à une spécialité, à un épisode ou à un flux de travail, et cela peut être source de confusion, voire poser des problèmes de sécurité s’ils sont reproduits dans des listes de problèmes ou partagés dans des documents hors du contexte d’origine. Ces qualificatifs peuvent être définis dans des archétypes distincts et être inclus dans le slot « Statut », car leur utilisation varie selon les contextes. On s’attend à ce qu’ils soient principalement utilisés dans le contexte approprié et qu’ils ne soient pas partagés en dehors de ce contexte sans une compréhension claire des conséquences potentielles. Par exemple, un diagnostic principal pour un clinicien peut être un diagnostic secondaire pour un autre spécialiste ; un problème actif peut devenir inactif (ou inversement), ce qui peut avoir un impact sur l’utilisation sûre de l’aide à la décision clinique. En général, ces qualificatifs doivent être appliqués localement dans le contexte du système clinique, et dans la pratique, ces statuts doivent être gérés manuellement par les cliniciens afin de garantir que les listes de problèmes « actuels/passés », « actifs/inactifs » ou « principaux/secondaires » soient cliniquement exactes. \r\n\r\nCet archétype sera utilisé comme composant au sein du dossier médical axés sur les problèmes (Problem Oriented Medical Record), tel que décrit par Larry Weed. D’autres archétypes, représentant des concepts cliniques tels que l’« état pathologique » en tant qu’organisateur global des diagnostics, etc., devront être développés pour soutenir cette approche.\r\n\r\nDans certaines situations, on peut supposer que l’identification d’un diagnostic relève exclusivement de l’expertise des médecins, mais ce n’est pas l’objectif de cet archétype. Les diagnostics peuvent être enregistrés à l’aide de cet archétype par n’importe quel professionnel de santé.",
+          "misuse" : "À ne pas utiliser pour enregister les symptômes tels que décrits par la personne concernée — utiliser l’archétype CLUSTER.symptom, généralement au sein de l’archétype OBSERVATION.story.\r\n\r\nÀ ne pas utiliser pour enregistrer les résultats d’examens — utiliser la famille d’archétypes CLUSTER liés aux examens, généralement imbriqués dans l’archétype OBSERVATION.exam.\r\n\r\nÀ ne pas utiliser pour enregistrer les résultats d’analyses de laboratoire ou les diagnostics associés, par exemple les diagnostics pathologiques — utilisez un archétype approprié de la famille des archétypes OBSERVATION relatifs au laboratoire.\r\n\r\nÀ ne pas utiliser pour enregistrer les résultats d’examens d’imagerie ou les diagnostics d’imagerie — utilisez un archétype approprié de la famille des archétypes OBSERVATION relatifs à l’imagerie.\r\n\r\nÀ ne pas utiliser pour enregister des « diagnostics différentiels » : utilisez l’archétype EVALUATION.differential_diagnosis.\r\n\r\nÀ ne pas utiliser pour enregistrer le « motif de la consultation » ou la « plainte principale » : utilisez l’archétype EVALUATION.reason_for_encounter.\r\n\r\nÀ ne pas utiliser pour enregistrer des interventions : utilisez l’archétype ACTION.procedure.\r\n\r\nÀ ne pas utiliser pour enregister des informations relatives à la grossesse — utilisez les archétypes EVALUATION.pregnancy_bf_status, EVALUATION.pregnancy et les archétypes associés.\r\n\r\nÀ ne pas utiliser pour enregister des informations concernant des risques pour la santé ou des problèmes potentiels — utilisez l’archétype EVALUATION.health_risk.\r\n\r\nÀ ne pas utiliser pour enregister des déclarations concernant des effets indésirables, des allergies ou des intolérances — utilisez l’archétype EVALUATION.adverse_reaction.\r\n\r\nÀ ne pas utiliser pour enregister l’absence (ou la présence négative) d’un problème ou d’un diagnostic, par exemple « Aucun problème ou diagnostic connu » ou « Aucun diabète connu ». Utilisez l’archétype EVALUATION.exclusion-problem_diagnosis pour exprimer une affirmation positive concernant l’exclusion d’un problème ou d’un diagnostic.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "旨在用于记录关于单个已明确的健康问题或诊断的详情。\r\n\r\n在临床文档记录的背景下，健康问题故意保持了宽松的预定适用范围，以便采集任何可能对个人健康产生任何程度不利影响的真实或所感知到的担忧/关注事项（concern）。健康问题可能是由个人（患者本人）、[非正规]照护人员或医疗保健专业人员来确定。然而，诊断则另外还依据客观的临床评判标准进行了定义，且通常仅仅是由医疗保健专业人员来确定。",
+          "keywords" : [ "事宜", "事项", "情况", "健康状况", "病情", "问题", "诊断", "关注事项", "担心事项", "担忧", "损伤", "临床印象" ],
+          "use" : "旨在用于记录关于单个已明确的健康问题或诊断的详情。\r\n\r\n在实践当中，几乎不可能做出明确的定义来区分“问题”（problem）与“诊断”（diagnosis）——我们无法可靠地判断究竟何时才应该将问题视为诊断。当诊断或分类标准得以成功满足时，我们可以自信地将相应的情况/病情（condition）称为正式的诊断，但在满足此类的评判标准/条件之前，且存在可用的支持性证据之时，也可以有效合理地采用“诊断”一词。诊断标签所需支持性证据的数量并不容易定义，实际上很可能还会因情况而异。多年来，许多标准委员会一直在努力解决这个定义难题，但目前还没有明确的解决办法。\r\n\r\n对于利用本原始型的临床文档记录目的来说，在此会将问题与诊断视为统一的连续体系，且由问题到诊断，不断增加的细节水平和支持性证据通常会为“诊断”标签带来更大的权重。在本原始型当中，没有必要将情况/健康状况/病情归类为“问题”还是“诊断”。支持两者文档记录工作的数据需求完全相同，当证据变得可用之时，就需要额外的数据结构来支持收纳相应的证据。关于问题的例子包括：在没有关于肥胖的正式诊断的情况下，个人所表达的关于减肥的愿望；或者是与特定家庭成员的关系问题。关于正式诊断的示例包括拥有历史/病史信息、检查结果、组织病理学发现、放射医学发现支持并满足已知诊断标准所有要求的癌症。在实践当中，大多数的问题或诊断并不处于问题—诊断连续体系的两端，而是介于两者之间。\r\n\r\n本原始型可用于很多的上下文背景。例如，在临床就诊咨询/会诊期间对问题或临床诊断的记录；填写持续存在/更新的问题清单；或者是提供出院摘要文档之中总结性陈述。\r\n\r\n在实践当中，临床医务人员/临床医生会使用许多上下文特异性的限定词（context-specific qualifier），如过去/现在、主要/次要、现行有效/无效、入院/出院等等。上下文背景可以针对的是位置/场所、专业、服务节段（episode）或工作流，如果将此类的限定词长久存储在问题清单当中，或者是在原始上下文背景之外的文档当中加以共享，则可能会导致混淆/困惑甚至潜在的安全问题。可以单独对此类的限定词进行原始型化，并将其收纳在状态槽位'Status'之中，因为它们的用法在不同的场所环境下会有所不同。期望将此类的限定词/状态主要用于合适的上下文背景，而不是在没有清楚地了解潜在后果的情况下在相应的上下文背景之外共享。例如，一位临床医生的初步诊断可能是另一位专科医生的次要诊断；现行有效的问题可能会变为无效状态（反之亦然），而这种情况可能会影响临床决策支持（CDS）措施的安全使用。一般来说，应该在本地将这些状态应用于相应临床系统的上下文背景，而在实践当中，则应该由临床医务人员/临床医生来手动管理这些状态，以确保当前/过去、现行有效/无效或主要/次要的问题的列表在临床上是准确的。\r\n\r\n正如拉里·维德（Larry Weed）所描述的那样，在面向问题的病历（Problem Oriented Medical Record）当中，本原始型将会作为一种组件来使用。为了支持这种方法，需要开发其他原始型，以便将情况/健康状况/病情（condition）之类的临床概念表示为诊断的总体组织手段等。\r\n\r\n在某些情况下，可能会假定认为诊断的确定仅仅属于是医生的专长，但这一点并不是本原始型的意图。任何的医疗保健专业人员都可以利用本原始型来记录诊断。",
+          "misuse" : "并非旨在用于记录个人（患者本人）所描述的症状 - 对此，请采用群簇型症状原始型 CLUSTER.symptom 来记录，且通常会将后者放在观察型主观临床病史原始型 OBSERVATION.story 之中。\r\n\r\n并非旨在用于记录检查发现/所见 - 对此，请采用与检查相关的群簇型原始型系列，且通常会将后者嵌套在观察型检查原始型 OBSERVATION.exam 当中。\r\n\r\n并非旨在用于记录实验室检验结果或相关的诊断，如病理诊断 - 对此，请选用观察型实验室[检验]原始型系列之中合适的原始型。\r\n\r\n并非旨在用于记录成像检查结果或成像诊断 - 对此，请选用观察型成像/影像学原始型系列之中合适的原始型。\r\n\r\n并非旨在用于记录鉴别诊断（Differential Diagnosis） - 对此，请采用评价型鉴别诊断原始型 EVALUATION.differential_diagnosis。\r\n\r\n并非旨在用于记录就医/就诊原因（Reason for Encounter）或当前主诉（Present Complaint） - 对此，请采用评价型就医/就诊原因原始型 EVALUATION.reason_for_encounter。\r\n\r\n并非旨在用于记录操作[项目] - 对此，请采用行动型操作[项目]原始型 ACTION.procedure。\r\n\r\n并非旨在用于记录关于妊娠的详情 - 对此，请采用评价型妊娠【bf: 哺乳?】状态原始型 EVALUATION.pregnancy_bf_status 和评价型妊娠原始型 EVALUATION.pregnancy 以及相关的原始型。\r\n\r\n并非旨在用于记录关于健康风险或潜在问题的陈述 - 对此，请采用评价型健康风险原始型 EVALUATION.health_risk。\r\n\r\n并非旨在用于记录关于不良反应、过敏/变态反应或不耐的陈述 - 对此，请采用评价型不良反应原始型 EVALUATION.adverse_reaction。\r\n\r\n并非旨在用于明确记录关于并不存在（或否定存在）特定问题或诊断的情况，如“无已知问题或诊断”或“无已知糖尿病”。对此，请采用评价型除外问题/诊断原始型 EVALUATION.exclusion-problem_diagnosis 来表达关于排除特定问题或诊断的明确陈述。\r\n\r\n",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
         }
       }
     },
@@ -2420,24 +2502,6 @@
               } ],
               "attributeTuples" : [ ]
             }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0043.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-ctcae-001.v1",
-              "referenceType" : "archetypeOverlay"
-            }, {
-              "@type" : "C_ARCHETYPE_ROOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
-              "nodeId" : "at0043.2",
-              "attributes" : [ ],
-              "attributeTuples" : [ ],
-              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-symptom_sign-001.v2",
-              "referenceType" : "archetypeOverlay"
-            }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
@@ -2491,6 +2555,24 @@
               "nodeId" : "at0069.1",
               "attributes" : [ ],
               "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..*",
+              "nodeId" : "at0043.1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-ctcae-001.v1",
+              "referenceType" : "archetypeOverlay"
+            }, {
+              "@type" : "C_ARCHETYPE_ROOT",
+              "rmTypeName" : "CLUSTER",
+              "occurrences" : "0..1",
+              "nodeId" : "at0043.2",
+              "attributes" : [ ],
+              "attributeTuples" : [ ],
+              "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-symptom_sign-001.v2",
+              "referenceType" : "archetypeOverlay"
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -2505,48 +2587,6 @@
         "es" : { },
         "es-ar" : { },
         "de" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Problem/Diagnose",
-            "description" : "Angaben über einen einzelnen identifizierten Gesundheitszustand, eine Verletzung, eine Behinderung oder ein Problem, welches das körperliche, geistige und/oder soziale Wohlergehen einer Einzelperson beeinträchtigt.",
-            "comment" : "Eine klare Abgrenzung zwischen Problem und Diagnose ist in der Praxis nicht einfach zu erreichen. Für die Zwecke der klinischen Dokumentation mit diesem Archetyp werden Problem und Diagnose als ein Kontinuum betrachtet, mit zunehmendem Detaillierungsgrad und unterstützenden Beweisen, die in der Regel dem Etikett \"Diagnose\" Gewicht verleihen."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Name des Problems/ der Diagnose",
-            "description" : "Namentliche Identifikation des Problems oder der Diagnose.",
-            "comment" : "Wo möglich, ist die Kodierung des Problems oder der Diagnose über eine Terminologie zu bevorzugen."
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Anatomische Stelle (strukturiert)",
-            "description" : "Eine strukturierte anatomische Lokalisation des Problems oder der Diagnose.",
-            "comment" : "Verwenden Sie diesen SLOT, um die Archetypen CLUSTER.anatomical_location oder CLUSTER.relative_location einzufügen, wenn die Anforderungen für die Aufnahme der anatomischen Position zur Laufzeit der Anwendung bestimmt werden oder komplexere Modellierungen wie z.B. relative Positionen erforderlich sind. Ist die anatomische Lokalisation über präkoordinierte Codes im Namen des Problems/Diagnose enthalten, wird die Verwendung dieses SLOT überflüssig."
-          },
-          "at0077" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0077",
-            "text" : "Datum/ Zeitpunkt des Auftretens/ der Erstdiagnose",
-            "description" : "Geschätzte oder exakte Zeit (bzw. Datum), zu der die Krankheitsanzeichen oder Symptome zum ersten mal beobachtet wurden.",
-            "comment" : "Datumswerte, die als \"Alter zu Beginn\" erfasst/importiert werden, sollten anhand des Geburtsdatums der Person in ein Datum umgewandelt werden."
-          },
-          "at0078" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0078",
-            "text" : "Ursache",
-            "description" : "Die Ursache, eine Reihe von Ursachen oder eine Art und Weise der Verursachung des Problems oder der Diagnose.",
-            "comment" : "Auch bekannt als „Ätiologie“. Die Codierung mit einer externen Terminologie wird nach Möglichkeit bevorzugt."
-          },
-          "at0079" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079",
-            "text" : "Variante",
-            "description" : "Spezifische Variante oder Subtyp der Diagnose, falls relevant.",
-            "comment" : "Zum Beispiel: „Akute motorische axonale Neuropathie“ als Variante des Guillain-Barre-Syndroms. Wo möglich, ist die Kodierung des Namens der Variante über eine Terminologie zu bevorzugen."
-          },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002",
@@ -2584,13 +2624,6 @@
           }
         },
         "en" : {
-          "at0079" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079",
-            "text" : "Variant",
-            "description" : "Specific variant or subtype of the Diagnosis, if relevant.",
-            "comment" : "For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. "
-          },
           "at0079.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0079",
@@ -2611,165 +2644,6 @@
           }
         },
         "sv" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Problem/Diagnos",
-            "description" : "Detaljer av ett enskilt identifierat hälsotillstånd, skada, funktionshinder eller något annat problem som påverkar individens fysiska, psykiska och eller sociala välbefinnande.",
-            "comment" : "Det är inte lätt att i praktiken uppnå en tydlig avgränsning mellan ett problem och en diagnos. Vid tillämpning av klinisk dokumentation med denna arketyp betraktas problem och diagnos som ett kontinuum, med plats för fler detaljer och stödjande bevis som vanligtvis ger tyngd till etiketten ”diagnos”."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Problem/Diagnos namn",
-            "description" : "Identifiering av problemet eller diagnosen efter namn.",
-            "comment" : "Kodning av namnet på problemet eller diagnosen med en terminologi är att föredra, om det är tillämpligt."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Datum och tid för kliniskt erkänd",
-            "description" : "Uppskattat eller reellt datum coh tid som diagnosen eller problemet erkändes av sjukvårdspersonal.",
-            "comment" : "Partiella datum är acceptabla. Om patienten är under ett år, då är det fullständiga datumet eller ett minimum av månad och år nödvändigt för korrekta åldersberäkningar exempelvis om de används för beslutsstöd. Data som registreras och importeras som \"Ålder vid tidpunkten för kliniskt erkännande\" ska omvandlas till ett datum med hjälp av patientens födelsedatum."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Svårighetsgrad",
-            "description" : "En bedömning av problemets eller diagnosens totala svårighetsgrad.",
-            "comment" : "Om svårighetsgraden har lagts till i Problem- och diagnos-namnet via förkoordinerade koder, blir detta fält överflödigt. Obs: mer specifik gradering av svårighetsgrad kan registreras i fältet ”specifika detaljer.”"
-          },
-          "at0009" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009",
-            "text" : "Klinisk beskrivning",
-            "description" : "En beskrivning av problemet eller diagnosen.",
-            "comment" : "Används för att ge bakgrund och kontext, inklusive utveckling, episoder eller exacerbationer, framsteg och andra relevanta detaljer om problemet eller diagnosen."
-          },
-          "at0012" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "Anatomisk plats",
-            "description" : "Identifiering av problemets eller diagnosens anatomiska plats.",
-            "comment" : "Kodning av den anatomiska platsens namn med en terminologi är att föredra, om det är tillämpligt. Använd det här fältet för att dokumentera förkoordinerade anatomiska platser. Om kraven för att dokumentera den anatomiska platsen bestäms automatiskt av applikationen eller kräver mer komplicerad modellering som exempelvis relativa platser, använd i så fall Cluster.anatomical_location eller cluster. relative_location inom \"Strukturerad anatomisk plats\" - fältet i denna arketyp. I detta fält är det möjligt att dokumentera kliniska scenarier som exempelvis att beskriva ett utslag på flera platser, men där alla andra egenskaper är identiska. Om den anatomiska platsen ingår i problem-och diagnos-namnet via förkoordinerade koder, blir detta fält överflödigt."
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Datum och tid för upplösning",
-            "description" : "Uppskattat eller reellt datum och tid för upplösning eller remission av detta problem eller diagnos, som fastställts av sjukvårdspersonal.",
-            "comment" : "Partiella datum är acceptabla. Om patienten är under ett år är det fullständiga datumet eller ett minimum av månad och år nödvändigt för korrekta åldersberäkningar, exempelvis om de används för beslutsstöd. Data som registreras och importeras som \"Ålder vid tidpunkten för upplösning\" ska konverteras till ett datum med hjälp av patientens födelsedatum."
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Strukturerad anatomisk plats",
-            "description" : "En strukturerad anatomisk plats för problemet eller diagnosen.",
-            "comment" : "Använd det här fältet för att infoga CLUSTER.anatomical_location eller CLUSTER.relative_location-arketyper om den anatomiska platsen bestäms automatiskt av applikationen eller kräver mer komplicerad modellering som exempelvis relativa platser. Om den anatomiska platsen är inkluderad i problem- och diagnos-namnet via förkoordinerade koder, blir detta fält överflödigt."
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Specifika detaljer",
-            "description" : "Detaljer som krävs för att kunna dokumenteras som unika egenskaper i den här problem eller diagnos arketypen.",
-            "comment" : "Fältet kan innehålla strukturerad detalj om klassificering eller stadieindelning av diagnosen diagnostiska kriterier, klassificeringskriterier eller formella bedömningar av svårighetsgrad, såsom gemensamma terminologikriterier för biverkningar."
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Status",
-            "description" : "Strukturerade detaljer för plats-, domän-, episod-eller arbetsflödes specifika aspekter av diagnosprocessen.",
-            "comment" : "Använd status- eller kontextbestämningar med omsorg, pga. varierande användning i praktiken samt pga. att driftskompabilitet inte kan garanteras om inte användningen är tydligt definierad i gruppen exempelvis:\r\nStatus: Aktiv och inaktiv, utredd och i remission Utvecklingsstatus: Initial, interimistisk preliminär och slutlig\r\nTemporal status: Nuvarande och tidigare \r\nEpisodicitet status: Första, nytt och pågående\r\nInskrivningsstatus: Inskrivning och utskrivning Prioritetsstatus: Primär och sekundär."
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "Mild",
-            "description" : "Problemet eller diagnosen stör inte normal aktivitet eller kan orsaka hälsoskador om den lämnas obehandlad."
-          },
-          "at0048" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0048",
-            "text" : "Medel",
-            "description" : "Problemet eller diagnosen orsakar störningar i normal aktivitet eller kommer att skada hälsan om den lämnas obehandlad."
-          },
-          "at0049" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0049",
-            "text" : "Svår",
-            "description" : "Problemet eller diagnosen förhindrar normal aktivitet eller allvarligt kommer att skada hälsan om den lämnas obehandlad."
-          },
-          "at0069" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0069",
-            "text" : "Kommentar",
-            "description" : "En extra beskrivning av problemet eller diagnosen som inte tagits upp i andra fält."
-          },
-          "at0070" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0070",
-            "text" : "Senast uppdaterad",
-            "description" : "Datumet då problemet eller diagnosen senast uppdaterades."
-          },
-          "at0071" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0071",
-            "text" : "Extra information",
-            "description" : "Ytterligare uppgifter som krävs för att fånga lokalt innehåll eller för anpassning till andra referens modeller och formalismer.",
-            "comment" : "Exempelvis: lokala informationskrav eller ytterligare metadata för anpassning till FHIR-eller CIMI -motsvarigheter."
-          },
-          "at0072" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0072",
-            "text" : "Förlopp",
-            "description" : "Beskrivning av problemets eller diagnosen förlopp sedan debuten."
-          },
-          "at0073" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0073",
-            "text" : "Diagnostisk säkerhet",
-            "description" : "Säkerhetsgraden för identifiering av diagnos.",
-            "comment" : "*If an alternative valueset is required, these values can be added to the DV_TEXT data type in a template.(en)"
-          },
-          "at0074" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0074",
-            "text" : "Misstänkt",
-            "description" : "Diagnosen har identifierats med en låg grad av säkerhet."
-          },
-          "at0075" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0075",
-            "text" : "Sannolik",
-            "description" : "Diagnosen har identifierats med en hög grad av säkerhet."
-          },
-          "at0076" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0076",
-            "text" : "Bekräftad",
-            "description" : "Diagnosen har bekräftats mot kända kriterier."
-          },
-          "at0077" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0077",
-            "text" : "Datum och tid för debut",
-            "description" : "Uppskattat eller reellt datum och tid när problemets eller diagnosens tecken eller symtom först observerades.",
-            "comment" : "Data som dokumenteras och importeras som \"Ålder vid debut\" ska konverteras till ett datum med hjälp av patientens födelsedatum."
-          },
-          "at0078" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0078",
-            "text" : "*Cause (en)",
-            "description" : "*A cause, set of causes, or manner of causation of the problem or diagnosis.(en)",
-            "comment" : "*Also known as 'aetiology' or 'etiology'. Coding with an external terminology is preferred, where possible.(en)"
-          },
-          "at0079" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079",
-            "text" : "*Variant (en)",
-            "description" : "*Specific variant or subtype of the Diagnosis, if relevant. (en)",
-            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible.  (en)"
-          },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002",
@@ -2880,147 +2754,6 @@
         "nl" : { },
         "zh" : { },
         "ca" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Problema/Diagnòstic",
-            "description" : "Detalls sobre una única condició de salut, lesió, discapacitat o qualsevol altre problema identificat que afecti al benestar físic, mental i/o social d'una persona.",
-            "comment" : "*Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'.(en)"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Nom del Problema/Diagnòstic",
-            "description" : "Identificació del problema o diagnòstic, pel nom.",
-            "comment" : "*Coding of the name of the problem or diagnosis with a terminology is preferred, where possible.(en)"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Data/hora del diagnòstic",
-            "description" : "Data/hora estimada o real en que un professional sanitari va declarar el diagnòstic o problema.",
-            "comment" : "*Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of clinical recognition\" should be converted to a date using the subject's date of birth.(en)"
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Severitat",
-            "description" : "Una avaluació de la severitat global del problema o diagnòstic.",
-            "comment" : "*If severity is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant. Note: more specific grading of severity can be recorded using the Specific details SLOT.(en)"
-          },
-          "at0009" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009",
-            "text" : "Descripció clínica",
-            "description" : "Descripció narrativa del problema o diagnòstic.",
-            "comment" : "*Use to provide background and context, including evolution, episodes or exacerbations, progress and any other relevant details, about the problem or diagnosis.(en)"
-          },
-          "at0012" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0012",
-            "text" : "Localització corporal",
-            "description" : "Identificació d'un lloc corporal per la localització del problema o diagnòstic.",
-            "comment" : "*Coding of the name of the anatomical location with a terminology is preferred, where possible.\r\nUse this data element to record precoordinated anatomical locations. If the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations then use the CLUSTER.anatomical_location or CLUSTER.relative_location within the 'Structured anatomical location' SLOT in this archetype. Occurrences for this data element are unbounded to allow for clinical scenarios such as describing a rash in multiple locations but where all of the other attributes are identical. If the anatomical location is included in the Problem/diagnosis name via precoordinated codes, this data element becomes redundant.(en)"
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Data/hora de resolució",
-            "description" : "Data/hora estimada o real de resolució o remissió d'aquest problema o diagnòstic, determinada per un professional sanitari.",
-            "comment" : "*Partial dates are acceptable. If the subject of care is under the age of one year, then the complete date or a minimum of the month and year is necessary to enable accurate age calculations - for example, if used to drive decision support. Data captured/imported as \"Age at time of resolution\" should be converted to a date using the subject's date of birth.\r\n(en)"
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Estructura corporal",
-            "description" : "Una localització anatòmica estructurada per al problema o diagnòstic.",
-            "comment" : "*Use this SLOT to insert the CLUSTER.anatomical_location or CLUSTER.relative_location archetypes if the requirements for recording the anatomical location are determined at run-time by the application or require more complex modelling such as relative locations.\r\n\r\nIf the anatomical location is included in the Problem/diagnosis name via precoordinated codes, use of this SLOT becomes redundant.(en)"
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Detalls específics",
-            "description" : "Detalls que es requereixen addicionalment per registrar atributs únics d'aquest problema o diagnòstic.",
-            "comment" : "*May include structured detail about the grading or staging of the diagnosis; diagnostic criteria, classification criteria or formal severity assessments such as Common Terminology Criteria for Adverse Events.(en)"
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Estat",
-            "description" : "Detalls estructurats per a aspectes específics d'ubicació, domini, episodi o flux de treball del procés diagnòstic.",
-            "comment" : "*Use status or context qualifiers with care, as they are variably used in practice and interoperability cannot be assured unless usage is clearly defined with the community of use. For example: active status - active, inactive, resolved, in remission; evolution status - initial, interim/working, final; temporal status - current, past; episodicity status - first, new, ongoing; admission status - admission, discharge; or priority status - primary, secondary.(en)"
-          },
-          "at0048" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0048",
-            "text" : "Moderada",
-            "description" : "El problema o diagnòstic interfereix amb l'activitat normal o pot causar danys a la salut si no es tracta."
-          },
-          "at0069" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0069",
-            "text" : "Comentaris",
-            "description" : "Narrativa addicional sobre el problema o diagnòstic no registrada en altres camps."
-          },
-          "at0070" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0070",
-            "text" : "Darrera actualització",
-            "description" : "La data en que es va actualitzar per última vegada aquest problema o diagnòstic."
-          },
-          "at0071" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0071",
-            "text" : "Extensió",
-            "description" : "Informació addicional necessària per capturar contingut local o per alinear-se amb altres models/formalismes de referència.",
-            "comment" : "*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)"
-          },
-          "at0072" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0072",
-            "text" : "Descripció del curs",
-            "description" : "Descripció narrativa sobre el curs del problema o diagnòstic des del inici."
-          },
-          "at0073" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0073",
-            "text" : "Certesa diagnòstica",
-            "description" : "El nivell de confiança en la identificació del diagnòstic.",
-            "comment" : "*If an alternative valueset is required, these values can be added to the DV_TEXT data type in a template.(en)"
-          },
-          "at0075" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0075",
-            "text" : "Probable",
-            "description" : "El diagnòstic s'ha identificat amb un nivell alt de certesa."
-          },
-          "at0076" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0076",
-            "text" : "Confirmat",
-            "description" : "El diagnòstic s'ha confirmat en base a criteris reconeguts."
-          },
-          "at0077" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0077",
-            "text" : "Data/hora d'inici",
-            "description" : "Data/hora estimada o real en que es van observar per primera vegada els signes o símptomes del problema/diagnòstic.",
-            "comment" : "*Data captured/imported as \"Age at onset\" should be converted to a date using the subject's date of birth.(en)"
-          },
-          "at0078" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0078",
-            "text" : "Causa",
-            "description" : "Una causa, conjunt de causes o el mecanisme causal del problema o diagnòstic.",
-            "comment" : "*Also known as 'aetiology' or 'etiology'. Coding with an external terminology is preferred, where possible.(en)"
-          },
-          "at0079" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0079",
-            "text" : "Variant",
-            "description" : "Variant o subtipus específic del Diagnòstic, si escau.",
-            "comment" : "*For example: 'acute motor axonal neuropathy' as a variant of Guillain-Barre Syndrome. Coding of the name of the variant with a terminology is preferred, where possible. (en)"
-          },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002",
@@ -3124,7 +2857,9 @@
             "description" : "Detalls que es requereixen addicionalment per registrar atributs únics d'aquest problema o diagnòstic.",
             "comment" : "*May include structured detail about the grading or staging of the diagnosis; diagnostic criteria, classification criteria or formal severity assessments such as Common Terminology Criteria for Adverse Events.(en)"
           }
-        }
+        },
+        "zh-cn" : { },
+        "fr" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -3272,6 +3007,34 @@
       },
       "author" : { },
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Jonas Bucher",
+        "organisation" : "Cistec AG",
+        "email" : "jonas.bucher@cistec.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Lin Zhang",
+        "organisation" : "Freelancer",
+        "email" : "linforest@163.com"
+      },
+      "otherDetails" : { }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
@@ -3345,6 +3108,21 @@
           "use" : "Use to provide a framework for recording a CTCAE classification, using terms from appropriate MedDRA terminology hierarchies.\r\n\r\nThis archetype is intended to be nested in the 'Specific details' SLOT within either the EVALUATION.problem_diagnosis or CLUSTER.symptom_sign archetypes, or other clinically relevant archetypes.",
           "misuse" : "Not to be used for recording details about adverse events outside of the CTCAE classification.",
           "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-pt" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-pt"
+          },
+          "purpose" : "Providenciar uma estrutura para registar a classificação CTCAE.",
+          "keywords" : [ "ctcea", "sinal", "sintoma", "doença", "adverso", "evento" ],
+          "use" : "Usar para providenciar uma estrutura para registo da classificação CTCAE, utilizando termos da hierarquia de terminologia MedDRA apropriada.\r\n\r\nÉ pretendido que este arquétipo seja colocado na SLOT 'Specific details' do arquétipo EVALUATION.problem_diagnosis ou do CLUSTER.symptom_sign, ou noutros arquétipos clinicamente relevantes.",
+          "misuse" : "Não usar para registar detalhes de eventos adversos fora da classificação CTCAE.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -3502,82 +3280,6 @@
       "termDefinitions" : {
         "en" : { },
         "de" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Common Terminology Criteria of Adverse Events (CTCAE)",
-            "description" : "*A framework for recording the CTCAE classification for an unfavourable and unintended sign, symptom or disease. (en)"
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Category (en)",
-            "description" : "*The MedDRA System Organ Class (SOC) category corresponding to the CTCAE 'Term' (LLT). (en)",
-            "comment" : "*This element identifies the anatomical or physiological system, aetiology or purpose. (en)"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Terme",
-            "description" : "*The name of the sign, symptom or disease observed, recorded as a MedDRA Lowest Level Term (LLT). (en)",
-            "comment" : "*This element can be mapped to the corresponding MedDRA code. (en)"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Grade category(en)",
-            "description" : "*The category representing the severity of the adverse event. (en)",
-            "comment" : "*The clinical descriptions for each 'Grade category' are documented in the published CTCAE v5.0 specification. Grade 0 has not been in use since CTCAE v2 but allows for the use of all versions of CTCAE. (en)"
-          },
-          "at0009" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0009",
-            "text" : "CTCAE Version",
-            "description" : "Die verwendete Version der CTCAE-Terminologie."
-          },
-          "at0015" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015",
-            "text" : "*Grad 1 (nb)",
-            "description" : "*Mild, ELLER asymptomatisk eller milde symptomer, ELLER kun kliniske eller diagnostiske observasjoner, ELLER ikke grunnlag for intervensjon. (nb)"
-          },
-          "at0016" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0016",
-            "text" : "*Grad 2 (nb)",
-            "description" : "*Moderat, ELLER minimal, lokal eller indikasjon for ikke-invasiv intervensjon, ELLER begrenser alders-tilpasset ADL. (nb)"
-          },
-          "at0017" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0017",
-            "text" : "*Grad 3 (nb)",
-            "description" : "*Alvorlig eller medisinsk betydningsfull, men ikke umiddelbart livstruende, ELLER indikasjon for sykehusinnleggelse eller forlengelse av sykehusopphold, ELLER invalidiserende, begrenset evne til egenomsorg og ADL. (nb)"
-          },
-          "at0018" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0018",
-            "text" : "*Grad 4 (nb)",
-            "description" : "*Livstruende konsekvenser, ELLER indikasjon for øyeblikkelig intervensjon. (nb)"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "*Grad 5 (nb)",
-            "description" : "*Død relatert til uønsket medisinsk hendelse. (nb)"
-          },
-          "at0020" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020",
-            "text" : "*Grade description (en)",
-            "description" : "*The observed term or phrase representing the severity of the  adverse event.  (en)",
-            "comment" : "*This element is a placeholder for the term or phrase associated with an identified grade. In most implementations it will be sourced from an external CTCAE knowledge base or resource at run-time. (en)"
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "*Grade 0 (en)",
-            "description" : "*An absence of an adverse event or within normal limits; found only in CTC versions 1 and 2. (en)"
-          },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002",
@@ -3613,76 +3315,6 @@
           }
         },
         "sv" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Common Terminology Criteria for Adverse Events (CTCAE)",
-            "description" : "*A framework for recording the CTCAE classification for an unfavourable and unintended sign, symptom or disease. (en)"
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "*Category (en)",
-            "description" : "*The MedDRA System Organ Class (SOC) category corresponding to the CTCAE 'Term' (LLT). (en)",
-            "comment" : "*This element identifies the anatomical or physiological system, aetiology or purpose. (en)"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Term",
-            "description" : "*The name of the sign, symptom or disease observed, recorded as a MedDRA Lowest Level Term (LLT). (en)",
-            "comment" : "*This element can be mapped to the corresponding MedDRA code. (en)"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Grade category(en)",
-            "description" : "*The category representing the severity of the adverse event. (en)",
-            "comment" : "*The clinical descriptions for each 'Grade category' are documented in the published CTCAE v5.0 specification. Grade 0 has not been in use since CTCAE v2 but allows for the use of all versions of CTCAE. (en)"
-          },
-          "at0015" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0015",
-            "text" : "*Grad 1 (nb)",
-            "description" : "*Mild, ELLER asymptomatisk eller milde symptomer, ELLER kun kliniske eller diagnostiske observasjoner, ELLER ikke grunnlag for intervensjon. (nb)"
-          },
-          "at0016" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0016",
-            "text" : "*Grad 2 (nb)",
-            "description" : "*Moderat, ELLER minimal, lokal eller indikasjon for ikke-invasiv intervensjon, ELLER begrenser alders-tilpasset ADL. (nb)"
-          },
-          "at0017" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0017",
-            "text" : "*Grad 3 (nb)",
-            "description" : "*Alvorlig eller medisinsk betydningsfull, men ikke umiddelbart livstruende, ELLER indikasjon for sykehusinnleggelse eller forlengelse av sykehusopphold, ELLER invalidiserende, begrenset evne til egenomsorg og ADL. (nb)"
-          },
-          "at0018" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0018",
-            "text" : "*Grad 4 (nb)",
-            "description" : "*Livstruende konsekvenser, ELLER indikasjon for øyeblikkelig intervensjon. (nb)"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "*Grad 5 (nb)",
-            "description" : "*Død relatert til uønsket medisinsk hendelse. (nb)"
-          },
-          "at0020" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0020",
-            "text" : "*Grade description (en)",
-            "description" : "*The observed term or phrase representing the severity of the  adverse event.  (en)",
-            "comment" : "*This element is a placeholder for the term or phrase associated with an identified grade. In most implementations it will be sourced from an external CTCAE knowledge base or resource at run-time. (en)"
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "*Grade 0 (en)",
-            "description" : "*An absence of an adverse event or within normal limits; found only in CTC versions 1 and 2. (en)"
-          },
           "at0002.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0002",
@@ -3711,7 +3343,8 @@
             "comment" : "*This element identifies the anatomical or physiological system, aetiology or purpose. (en)"
           }
         },
-        "nb" : { }
+        "nb" : { },
+        "pt-pt" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -3769,6 +3402,19 @@
         "name" : "Vebjørn Arntzen, John Tore Valand",
         "organisation" : "Oslo University Hospital, Helse Bergen",
         "email" : "varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-pt"
+      },
+      "author" : {
+        "name" : "Joao Caixeirinho",
+        "email" : "joaorafaelcaixeirinho@gmail.com"
       },
       "otherDetails" : { }
     } ]
@@ -3908,6 +3554,21 @@
           "keywords" : [ ],
           "use" : "*Use to record details about a single episode of a symptom or reported sign in an individual, as reported by the individual, parent, care-giver or other party. It may be recorded by a clinician as part of a clinical history record as reported to them, observed by the clinician or self-recorded as part of a clinical questionnaire or personal health record. A complete clinical history or patient story may include varying level of details about multiple episodes of an identified symptom or reported sign, as well as multiple symptoms/signs.\r\n\r\nThis archetype has been designed to record the positive presence of the symptom or sign as part of history taking using OBSERVATION.story, or in conjunction with a positive response to OBSERVATION.symptom_sign_screening.\r\n\r\nIn the purest sense, symptoms are subjective observations of a physical or mental disturbance and signs are objective observations of the same, as experienced by an individual and reported to the history taker by the same individual or another party. From this logic it follows that we will need two archetypes to record clinical history - one for reported symptoms and another for reported signs. In reality this is impractical as it will require clinical data entry into either one of these models which adds signficant overheads to modellers and those entering data. In addition, there is often overlap in clinical concepts - for example, is previous vomiting or bleeding to be categorised as a symptom or reported sign? In response, this archetype has been specifically designed to provide a single information model that allows for recording of the entire continuum between clearly identifiable symptoms and reported signs.\r\n\r\nThis archetype has been intended to be used as a generic pattern for all symptoms and reported signs. The 'Specific details' SLOT can be used to extend the archetype to include additional, specific data elements for more complex symptoms or signs. \r\n\r\nThis archetype has been specifically designed to be used in the 'Structured detail' SLOT within the OBSERVATION.story archetype, but can also be used within other OBSERVATION or CLUSTER archetypes and in the 'Associated symptom/sign' or 'Previous episode' SLOT within other instances of this CLUSTER.symptom_sign archetype. (en)",
           "misuse" : "*Not to be used to record screening questionnaire responses about the presence or absence of specific symptoms - use the OBSERVATION.symptom_sign_screening archetype for this purpose. However, this CLUSTER.symptom_sign archetype may be nested within the 'Screening details' SLOT in the OBSERVATION.symptom_sign_screening archetype if it is necessary to extend the questionnaire by recording details about symptom or sign.\r\n\r\nNot to be used to record that a symptom or sign was explicitly reported as not present - use CLUSTER.exclusion_symptom_sign carefully for specific purposes where the overheads of recording in this way warrant the additional complexity.\r\n\r\nNot to be used for recording objective findings as part of a physical examination - use OBSERVATION.exam and related examination CLUSTER archetypes for this purpose.\r\n\r\nNot to be used for diagnoses and problems that form part of a persisting Problem List - use EVALUATION.problem_diagnosis.\r\n\r\nNot to be used to record a formal and repeatable severity scale such as VAS or NRS. Use appropriate OBSERVATION archetypes for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar dades sobre un únic episodi d’un símptoma o signe notificat, incloent-hi el context, però no les dades, d’episodis anteriors si fos necessari.",
+          "keywords" : [ "malaltia", "símptoma", "alteració", "problema", "malestar", "motiu de consulta", "símptoma de presentació", "signe" ],
+          "use" : "Informació rebuda del pacient, el progenitor, cuidador o un tercer. Utilitzar per a registrar dades sobre un únic episodi d’un símptoma o signe notificat en un pacient. El pot registrar un metge com a part d’un registre d’història clínica com se’ls ha informat, observat pel metge o autodiagnosticat com a part d’un qüestionari clínic o història clínica personal. Una història clínica o història del pacient completa pot incloure diversos nivells de detalls sobre episodis múltiples d’un símptoma identificat o signe notificat, així com múltiples símptomes/signes.\r\n\r\nAquest arquetip s’ha dissenyat per a registrar la presència positiva del símptoma o signe com a part de l’anamnesi utilitzant OVSERVATION.story o conjuntament amb una resposta positiva a OBSERVATION.symptom_sign_screening.\r\n\r\nEn el sentit més pur, els símptomes són observacions subjectives d’una alteració física o mental i els signes són observacions objectives de la mateixa cosa, que experimenta un pacient i que es comunica a l’encarregat de la història per part de la mateixa persona o d’un tercer. D’aquesta lògica es pot deduir que faran falta dos arquetips per a registrar la història clínica – un per a símptomes notificats i l’altre per a signes notificats. En la pràctica, fer això és poc pràctic, ja que es requerirà que s’introdueixin dades clíniques en qualsevol d’aquests models, la qual cosa afegeix una càrrega significativa als modeladors i a aquells encarregats d’introduir dades. Addicionalment, els conceptes clínics sovint es superposen – per exemple, es classifica el vòmit o la sagnia prèvia com a símptoma o com a signe notificat? En resposta, aquest arquetip s’ha dissenyat específicament per a proveir un únic model d’informació que permet que es registri tot l’espectre que es troba entre els símptomes clarament identificables i els signes notificats.\r\n\r\nEs pretén que aquest arquetip s’utilitzi com un patró genèric per a tots els símptomes i signes notificats. El SLOT «Dades específiques» es pot utilitzar per ampliar l’arquetip perquè aquest inclogui elements de dades específics addicionals per a símptomes o signes més complexos.\r\n\r\nAquest arquetip s’ha dissenyat específicament perquè s’utilitzi dins del SLOT «Dades estructurades», que es troba dins de l’arquetip OBSERVATION.story, però també es pot utilitzar dins d’altres arquetips de tipus OBSERVATION o CLUSTER, així com dins del SLOT «Símptoma/signe associat» o «Episodi previ» dins d’altres exemples d’aquest CLUSTER.symptom_sign archetype.",
+          "misuse" : "No utilitzar per a registrar respostes d’un qüestionari de cribratge sobre la presència o absència de símptomes específics – utilitzar l’arquetip OBSERVATION.symptom_sign_screening per aquest objectiu. No obstant això, aquest arquetip CLUSTER.symptom_sign es pot situar dins del SLOT «Dades de cribratge» de l’arquetip OBSERVATION.symptom_sign_screening si és necessari ampliar el qüestionari mitjançant el registre de dades sobre símptomes o signes.\r\n\r\nNo utilitzar per a registrar que un símptoma o signe es notificà explícitament com absent – utilitzar CLUSTER.exclusion_symptom_sign per a finalitats específiques amb compte quan la càrrega de registrar d’aquesta manera justifiqui la complexitat addicional.\r\n\r\nNo utilitzar per a registrar observacions objectives com a part d’un examen físic – utilitzar OBSERVATION.exam i arquetips d’examen de tipus CLUSTER relacionats per aquest objectiu.\r\n\r\nNo utilitzar per a diagnosis i problemes que formen part d’una Llista de Problemes persistent – utilitzar EVALUATION.problem_diagnosis.\r\n\r\nNo utilitzar per a registrar una escala de gravetat formal i repetible com l’EVA (Escala Visual Analògica) o l’Escala Numèrica del Dolor (NRS, per les sigles en anglès). Utilitzar arquetips de tipus OBSERVATION adequats per aquest objectiu.",
           "originalResourceUri" : { },
           "otherDetails" : { }
         }
@@ -4062,6 +3723,22 @@
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0200.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_DATE_TIME",
               "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
@@ -4456,20 +4133,6 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "ar-sy" : {
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "*Duration(en)",
-            "description" : "*The duration of the symptom or sign since onset.(en)",
-            "comment" : "*If 'Date/time of onset' and 'Date/time of resolution' are used in systems, this data element may be calculated, or alternatively, be considered redundant in this scenario. The text data type is used for recording preset duration intervals such as '0-7 days, 1-2 weeks, 2 weeks or more'. (en)"
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "*Onset type(en)",
-            "description" : "*Description of the onset of the symptom or sign.(en)",
-            "comment" : "*The type of the onset can be coded with a terminology, if desired. For example: gradual; or sudden.(en)"
-          },
           "at0164.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0164",
@@ -4486,20 +4149,6 @@
           }
         },
         "en" : {
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Duration",
-            "description" : "The duration of this episode of the symptom or sign since onset.",
-            "comment" : "If 'Date/time of onset' and 'Date/time of resolution' are used in systems, this data element may be calculated, or alternatively, be considered redundant in this scenario. The text data type is used for recording preset duration intervals such as '0-7 days, 1-2 weeks, 2 weeks or more'."
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "Onset type",
-            "description" : "Description of the onset of the symptom or sign.",
-            "comment" : "The type of the onset can be coded with a terminology, if desired. For example: gradual; or sudden."
-          },
           "at0164.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0164",
@@ -4516,20 +4165,6 @@
           }
         },
         "de" : {
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Dauer",
-            "description" : "Die Dauer der Episode des Symptoms/Krankheitsanzeichens seit Beginn.",
-            "comment" : "Wenn in Systemen \"Beginn der Episode\" und \"Zeitpunkt des Rückgangs\" verwendet werden, kann dieses Datenelement berechnet oder alternativ in diesem Szenario als redundant angesehen werden. Der Datentyp \"Text\" wird zur Darstellung prädefinierten Dauerintervalle wie „0–7 Tage, 1–2 Wochen, 2 Wochen oder mehr“ verwendet."
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "Art des ersten Auftretens",
-            "description" : "Beschreibung des ersten Auftretens des Symptoms/Krankheitsanzeichens.",
-            "comment" : "Es besteht die Möglichkeit die Art des ersten Auftretens mit einer Terminologie zu kodieren. Zum Beispiel: schleichend oder plötzlich."
-          },
           "at0164.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0164",
@@ -4559,20 +4194,6 @@
             "description" : "Navnet på det rapporterte symptomet eller sykdomstegnet.",
             "comment" : "Designkommentar: Hvis det er svart ja på kartleggingsspørsmålet om subjektiv hørselstap, skal denne automatisk settes."
           },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Varighet",
-            "description" : "Varigheten av denne episoden av symptomet eller sykdomstegnet siden debut.",
-            "comment" : "Brukes \"Dato/tid for debut\" og \"Dato/tid for opphør\" i systemer, kan dette dataelementet kalkuleres av systemet eller være overflødig. Tekst-datatypen kan brukes for å registrere forhåndsdefinerte intervaller som \"0-7 dager, 1-2 uker, 2 uker eller mer\"."
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "Debuttype",
-            "description" : "Beskrivelse av symptomets eller sykdomstegnets debut.",
-            "comment" : "Debuttypen kan kodes med en terminologi om ønsket. For eksempel: Gradvis eller plutselig."
-          },
           "at0164.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0164",
@@ -4589,20 +4210,6 @@
           }
         },
         "fi" : {
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Kesto",
-            "description" : "The duration of this episode of the symptom or sign since onset.(en)",
-            "comment" : "*If 'Date/time of onset' and 'Date/time of resolution' are used in systems, this data element may be calculated, or alternatively, be considered redundant in this scenario. The text data type is used for recording preset duration intervals such as '0-7 days, 1-2 weeks, 2 weeks or more'. (en)"
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "Oireen puhkeaminen",
-            "description" : "Description of the onset of the symptom or sign.(en)",
-            "comment" : "*The type of the onset can be coded with a terminology, if desired. For example: gradual; or sudden.(en)"
-          },
           "at0164.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0164",
@@ -4619,335 +4226,6 @@
           }
         },
         "sv" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Symtom och tecken",
-            "description" : "Observation av ett fysiskt eller psykiskt besvär hos en individ."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Symtom- och teckennamn",
-            "description" : "Namnet på det uppvisade symtomet eller tecknet.",
-            "comment" : "Symtomnamnet ska kodas med en terminologi, om det är möjligt."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Beskrivning",
-            "description" : "Beskrivning av det uppvisade symtomet eller tecknet."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Mönster för episod",
-            "description" : "En beskrivning av den här episodens mönster av symtomet eller tecknet.",
-            "comment" : "Exempelvis: smärta som kan beskrivas som konstant eller intermittent."
-          },
-          "at0017" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0017",
-            "text" : "Effekt",
-            "description" : "Upplevd effekt av påverkande faktorn på symtomet eller tecknet."
-          },
-          "at0018" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0018",
-            "text" : "Påverkande faktor",
-            "description" : "Detalj om en specifik faktor som påverkar det identifierade symtomet eller tecknet under denna episod."
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Faktor",
-            "description" : "Namn på den påverkande faktorn.",
-            "comment" : "Exempel på påverkande faktorn: Ligger på flera kuddar, äter eller ges ett specifikt läkemedel."
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Svårighetsgrad",
-            "description" : "Kategori som presenterar symtomens eller tecknets totala svårighetsgrad.",
-            "comment" : "*Defining values such as mild, moderate or severe in such a way that is applicable to multiple symptoms or signs plus allows multiple users to interpret and record them consistently is not easy. Some organisations extend the value set further with inclusion of additional values such as 'Trivial' and 'Very severe', and/or 'Mild-Moderate' and 'Moderate-Severe', adds to the definitional difficulty and may also worsen inter-recorder reliability issues. Use of 'Life-threatening' and 'Fatal' is also often considered as part of this value set, although from a pure point of view it may actually reflect an outcome rather than a severity. In view of the above, keeping to a well-defined but smaller list is preferred and so the mild/moderate/severe value set is offered, however the choice of other text allows for other value sets to be included at this data element in a template. (en)"
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "Mild",
-            "description" : "Symtomet eller tecknets intensitet orsakar inte störningar i normal aktivitet. \r\n"
-          },
-          "at0024" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Måttlig",
-            "description" : "Symtomet eller tecknets intensitet orsakar störningar i normal aktivitet."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Svår",
-            "description" : "Symtomets eller tecknets intensitet förhindrar normal aktivitet."
-          },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Varaktighet",
-            "description" : "Den här episodens varaktighet av symtomet eller tecknet sedan debuten.",
-            "comment" : "Om tidpunkter anges för \"Episoddebut\" och \"Uppklarandedatum och tid\" så kan detta fält räknas fram automatiskt av IT-systemet eller anses redundant.\r\n\r\nText-datatypen kan användas i system för att välja bland förutbestämda intervall, exempelvis \"0-7 dagar, 1-2 veckor, 2 veckor eller mer\""
-          },
-          "at0031" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0031",
-            "text" : "Antal tidigare inträffade episoder",
-            "description" : "Antalet gånger detta symtom eller tecken har förekommit tidigare."
-          },
-          "at0037" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0037",
-            "text" : "Episodbeskrivning",
-            "description" : "Beskrivning av symtomet eller tecknets förlopp under denna episod.",
-            "comment" : "Exempelvis: En textbeskrivning om symtomets debut, aktiviteter som förvärrade eller lindrade symtomen, om det förbättras eller förvärras och hur det uppklaras över veckor."
-          },
-          "at0056" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0056",
-            "text" : "Beskrivning",
-            "description" : "Beskrivning av påverkande faktorns effekt på symtomet eller tecknet."
-          },
-          "at0057" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0057",
-            "text" : "Beskrivning av tidigare episoder",
-            "description" : "Beskrivning av några eller alla tidigare episoder.",
-            "comment" : "Exempelvis: frekvens och periodicitet, per timme, dag, vecka, månad, år och regelbundenhet. Den kan innehålla en jämförelse med den här episoden."
-          },
-          "at0063" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0063",
-            "text" : "Associerade symtom och tecken",
-            "description" : "Strukturerade detaljer om eventuella samtidiga associerade symtom eller tecken. \r\n",
-            "comment" : "I kliniska system med läkningsmöjlighet är det möjligt att assoscierade symtom eller tecken redan är registrerade i journalen. System kan låta klinikern länka till relevanta associerade symtom och tecken. \r\n\r\nDäremot i ett system eller i meddelanden utan länkningsmöjlighet till befintliga data eller med en ny patient kan ytterligare fall av symtomarketypen ingå för att presentera associerade symtom och tecken."
-          },
-          "at0146" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0146",
-            "text" : "Tidigare episoder",
-            "description" : "Strukturerade detaljer om symtomet eller tecken under en tidigare episod.",
-            "comment" : "I länkade kliniska system är det möjligt att tidigare episoder redan är registrerade inom EHR. System kan låta klinikern länka till relevanta tidigare episoder (med dataypen LINK). Men i ett system eller meddelande utan länkningsmöjlighet till befintlig data eller med en ny patient kan ytterligare fall av symtomarketypen ingå här för att beskriva tidigare episoder. Det rekommenderas att nya fall av Symtom-arketypen som förs in i detta fält (SLOT) presenterar en eller flera tidigare episoder kopplade till just det här symtomfallet."
-          },
-          "at0147" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0147",
-            "text" : "Strukturerad lokalisation",
-            "description" : "Strukturerad lokalisation av plats på kroppen där symtomen eller tecknet uppvisades.",
-            "comment" : "Om den anatomiska platsen ingår i Symtom-namnet via fördeffinierade koder blir användningen av detta fält överflödig. Om den anatomiska platsen registreras med hjälp av \"Lokalisering\" -fältet, är det inte tillåtet att använda CLUSTER-arketyper i det här fältet, registrera endast den enkla \"Lokalisering\" ELLER \"Strukturerad lokalisering\", men inte båda.\r\n\r\nOm den anatomiska platsen ingår i Symtom-namnet via prekoordinerade koder blir det här fältet redundant. Om den anatomiska platsen beskrivs i fältet \"Lokalisation\", är det inte tillåtet att använda detta fält. Dokumentera alltså endast i \"Lokalisation\" ELLER i \"Strukturerad lokalisation\", inte i båda fälten."
-          },
-          "at0151" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0151",
-            "text" : "Lokalisation",
-            "description" : "Lokalisation av plats på kroppen där symtomet eller tecknet rapporterats.",
-            "comment" : "Det här fältet kan repeteras (tillåtna förekomster 0.. *) för att tillåta att flera lokaliseringar av kroppsställen kan anges separat i en mall om så önskas. Detta möjliggör dokumentation av kliniska användningsfall där ett symtom eller tecken förekommer på flera ställen samtidigt (eller för att identifiera både start- och slutpunkt för en strålsmärta) men där alla andra egenskaper, som påverkan och varaktighet, är identiska. \r\n\r\nOm dokumentationskraven för lokalisation är mer komplexa (t.ex. relativ lokalisation) eller om de genereras automatiskt av gränssnitt i IT-system, använd i så fall arketyperna CLUSTER.anatomical_location eller CLUSTER.relative_location inom fältet \"Strukturerad lokalisation\" i den här arketypen.\r\n\r\nOm den anatomiska platsen ingår i Symtom-namnet via prekoordinerade koder blir det här fältet redundant. Om den anatomiska platsen beskrivs i fältet \"Strukturerad lokalisation\", är det inte tillåtet att använda detta fält. Dokumentera alltså endast i den enkla \"Lokalisation\" ELLER i \"Strukturerad lokalisation\", inte i båda fälten."
-          },
-          "at0152" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0152",
-            "text" : "Episoddebut",
-            "description" : "Debut för denna episod av symtomet eller tecknet.",
-            "comment" : "Partiella datum och tider är tillåtna, men om det är möjligt och lämpligt kan det exakta datumet och tiden för debut kan registreras. Om det här symtomet eller tecknet upplevs för första gången eller är ett återfall, så används det här datumet för att utgöra början på just denna episod. Om det här symtomet eller tecknet är pågående kan det här fältet vara överflödigt om det redan tidigare har beskrivits."
-          },
-          "at0153" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0153",
-            "text" : "Specifika detaljer",
-            "description" : "Specifika datakomponenter som krävs för att det identifierade symtomet eller tecknet ska kunna registreras som unika egenskaper.",
-            "comment" : "Exempelvis: CTCAE-skattning."
-          },
-          "at0154" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0154",
-            "text" : "Faktordetalj",
-            "description" : "Strukturerad detalj om den faktor som är kopplad till det identifierade symtomet eller tecknet."
-          },
-          "at0155" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0155",
-            "text" : "Påverkan",
-            "description" : "Beskrivning av det här symptomet eller tecknets påverkan.",
-            "comment" : "I bedömningen av påverkan kan symtomets svårighetsgrad, varaktighet och frekvens samt typ av påverkan inklusive, men inte begränsat till, funktionell, social och emotionell påverkan beaktas. \r\n\r\nDetta fält kan repeteras (förekomst satt till 0..*) för att tillåta flera typer av påverkan att separeras i en mall om så önskas. Exempel på funktionell påverkan av hörselnedsättning kan innefatta: \"Svårigheter att höra i lugn miljö\"; \"Svårighet att höra tv eller radio\", \"Svårighet att höra gruppkonversation\" och \"Svårighet att höra vid telefonsamtal\"."
-          },
-          "at0156" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0156",
-            "text" : "Ingen effekt",
-            "description" : "Faktorn har ingen effekt på symtomet eller tecknet."
-          },
-          "at0158" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0158",
-            "text" : "Förvärrar",
-            "description" : "Faktorn ökar symtomets eller tecknets svårighetsgrad eller effekt."
-          },
-          "at0159" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0159",
-            "text" : "Lindrar",
-            "description" : "Faktorn minskar svårighetsgraden eller påverkan på symtomet eller tecknet, men blir inte fullständigt utrett."
-          },
-          "at0161" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0161",
-            "text" : "Uppklarandedatum och tid",
-            "description" : "Tidpunkt när denna episod av symtomet eller tecknet upphör.",
-            "comment" : "Om \"Datum och tidpunkt för start\" och \"Varaktighet\" används i systemen, kan detta fält beräknas eller alternativt betraktas som redundant. \r\n\r\nPartiella datum och tider är tillåtna, men om det är möjligt och lämpligt kan det exakta datumet och tiden för upplösning registreras."
-          },
-          "at0163" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0163",
-            "text" : "Kommentar",
-            "description" : "Ytterligare beskriving av symtomet eller tecknet som inte kunnat dokumenteras i andra fält."
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "Typ av debut",
-            "description" : "Beskrivning av symtomets eller tecknets debut.",
-            "comment" : "Typ av debut kan kodas med en terminologi, om så önskas. Exempelvis: gradvis eller plötslig."
-          },
-          "at0165" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0165",
-            "text" : "Utlösande faktorer",
-            "description" : "Detaljer om specifika faktorer som associeras med att symtomet eller tecknet utlöses (startar)",
-            "comment" : "Till exempel: att ligga ner leder till halsbränna; eller att gå uppför en kulle leder till claudicatio (fönstertittarsjuka)."
-          },
-          "at0170" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0170",
-            "text" : "Faktor",
-            "description" : "Namn på hälsohändelsen, symtomet, uppvisade tecknet eller annan faktor.",
-            "comment" : "Exempelvis: uppkomst av ett annat symptom; lägga sig ner; eller gå uppför en kulle."
-          },
-          "at0171" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0171",
-            "text" : "Tidsintervall",
-            "description" : "Tidsintervallet mellan uppkomsten av faktorn och uppkomsten av symtomet eller tecknet."
-          },
-          "at0175" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0175",
-            "text" : "Episodicitet",
-            "description" : "Den här episodens kategori för det identifierade symtomet eller tecknet."
-          },
-          "at0176" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0176",
-            "text" : "Ny",
-            "description" : "En ny episod av symtomet eller tecknet, antingen debut eller en återkommande förekomst där den föregående episoden avslutats helt."
-          },
-          "at0180" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0180",
-            "text" : "Progression",
-            "description" : "Beskrivning av progressionen av symtomet eller tecknet vid rapporteringstidpunkten.",
-            "comment" : "*Occurrences of this data element are set to 0..* to allow multiple types of progression to be separated out in a template if desired - for example, severity or frequency. The Text data type is added as an option, to support other value sets than the ones included in the archetype. (en)"
-          },
-          "at0181" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0181",
-            "text" : "förbättras",
-            "description" : "Svårighetsgraden av symtomet eller tecknet har förbättrats totalt sett under den här episoden."
-          },
-          "at0182" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0182",
-            "text" : "oförändrat",
-            "description" : "Svårighetsgraden av symtomet eller tecknet har inte förändrats totalt sett under denna episod."
-          },
-          "at0183" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0183",
-            "text" : "försämras",
-            "description" : "Svårighetsgraden av symtomet eller tecknet har förvärrats totalt sett under denna episod."
-          },
-          "at0184" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0184",
-            "text" : "Löst",
-            "description" : "Svårighetsgraden av symtomet eller tecknet har lösts."
-          },
-          "at0185" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0185",
-            "text" : "Beskrivning",
-            "description" : "Beskrivning av faktorns effekt på det identifierade symtomet eller tecknet."
-          },
-          "at0187" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0187",
-            "text" : "Första tillfället",
-            "description" : "Detta är det första tillfället någonsin för detta symtom eller tecken."
-          },
-          "at0188" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0188",
-            "text" : "Återkommande (Återfall)",
-            "description" : "Ny förekomst av samma symtom eller tecken efter att en tidigare episod har avslutats."
-          },
-          "at0189" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0189",
-            "text" : "Karaktär",
-            "description" : "Ord eller kort fras som beskriver symtomets (eller tecknets) egenskaper.",
-            "comment" : "Exempel: smärta kan beskrivas som \"gnagande\", \"brännande\" eller \"som en elektrisk stöt\"; en huvudvärk kan vara \"bultande\" eller \"konstant\". Kodning med extern terminologi är att föredra, där så är möjligt."
-          },
-          "at0190" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0190",
-            "text" : "Upphävande faktor",
-            "description" : "Detaljer om specificerade faktorer som är associerade med lösningen/hävningen av symtomet eller tecknet. (sv)",
-            "comment" : "Exempelvis: upprätt hållning stoppar halsbrännan; eller vilopaus häver claudicatio"
-          },
-          "at0193" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0193",
-            "text" : "Faktor",
-            "description" : "Namn på hälsohändelsen, symtomet, tecknet eller annan faktor.",
-            "comment" : "Exempelvis: upprätt hållning; eller vila."
-          },
-          "at0194" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0194",
-            "text" : "Faktordetalj",
-            "description" : "Strukturerad detalj om den faktor som är kopplad till det identifierade symtomet eller tecknet."
-          },
-          "at0195" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0195",
-            "text" : "Tidsintervall",
-            "description" : "Tidsintervallet mellan uppkomsten av faktorn och upphävandet av symtomet eller tecknet."
-          },
-          "at0196" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0196",
-            "text" : "Beskrivning",
-            "description" : "Beskrivning av faktorns effekt på det identifierade symtomet eller tecknet."
-          },
-          "at0197" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0197",
-            "text" : "Faktordetalj",
-            "description" : "Strukturerad detalj om den faktor som är kopplad till det identifierade symtomet eller tecknet."
-          },
-          "at0198" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0198",
-            "text" : "*Severity rating (en)",
-            "description" : "*Numerical rating scale representing the overall severity of the symptom or sign. (en)",
-            "comment" : "*Symptom severity can be rated by the individual by recording a score for example from 0 (ie symptom not present) to 10 (ie symptom is as severe as the individual can imagine). (en)"
-          },
           "at0171.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0171",
@@ -5148,20 +4426,6 @@
           }
         },
         "pt-br" : {
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Duração",
-            "description" : "A duração deste episódio de sintoma ou sinal desde o início.",
-            "comment" : "*If 'Date/time of onset' and 'Date/time of resolution' are used in systems, this data element may be calculated, or alternatively, be considered redundant in this scenario. The text data type is used for recording preset duration intervals such as '0-7 days, 1-2 weeks, 2 weeks or more'. (en)"
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "Tipo de início",
-            "description" : "Descrição do inicio do sintoma ou sinal.",
-            "comment" : "O tipo de início pode ser codificado utilizando uma terminologia, se desejado. Por exemplo: gradual; ou súbito."
-          },
           "at0164.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0164",
@@ -5178,164 +4442,6 @@
           }
         },
         "nl" : {
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Naam van het symptoom",
-            "description" : "De naam van het vastgelegde symptoom"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Pattern(en)",
-            "description" : "*Narrative description about the pattern of the symptom or sign during this episode.(en)"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "*Factor(en)",
-            "description" : "*Name of the modifying factor.(en)"
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "*Severity category(en)",
-            "description" : "*Category representing the overall severity of the symptom or sign.(en)",
-            "comment" : "*Defining values such as mild, moderate or severe in such a way that is applicable to multiple symptoms or signs plus allows multiple users to interpret and record them consistently is not easy. Some organisations extend the value set further with inclusion of additional values such as 'Trivial' and 'Very severe', and/or 'Mild-Moderate' and 'Moderate-Severe', adds to the definitional difficulty and may also worsen inter-recorder reliability issues. Use of 'Life-threatening' and 'Fatal' is also often considered as part of this value set, although from a pure point of view it may actually reflect an outcome rather than a severity. In view of the above, keeping to a well-defined but smaller list is preferred and so the mild/moderate/severe value set is offered, however the choice of other text allows for other value sets to be included at this data element in a template. (en)"
-          },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "*Duration(en)",
-            "description" : "*The duration of this episode of the symptom or sign since onset.(en)",
-            "comment" : "*If 'Date/time of onset' and 'Date/time of resolution' are used in systems, this data element may be calculated, or alternatively, be considered redundant in this scenario. The text data type is used for recording preset duration intervals such as '0-7 days, 1-2 weeks, 2 weeks or more'. (en)"
-          },
-          "at0037" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0037",
-            "text" : "*Episode description(en)",
-            "description" : "*Narrative description about the course of the symptom or sign during this episode.(en)"
-          },
-          "at0057" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0057",
-            "text" : "*Description of previous episodes(en)",
-            "description" : "*Narrative description of any or all previous episodes.(en)"
-          },
-          "at0063" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0063",
-            "text" : "*Associated symptom/sign(en)",
-            "description" : "*Structured details about any associated symptoms or signs that are concurrent.(en)"
-          },
-          "at0146" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0146",
-            "text" : "*Previous episodes(en)",
-            "description" : "*Structured details of the symptom or sign during a previous episode.(en)"
-          },
-          "at0147" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0147",
-            "text" : "*Structured body site(en)",
-            "description" : "*Structured body site where the symptom or sign was reported.(en)"
-          },
-          "at0151" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0151",
-            "text" : "*Body site(en)",
-            "description" : "*Simple body site where the symptom or sign was reported.(en)"
-          },
-          "at0152" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0152",
-            "text" : "*Episode onset(en)",
-            "description" : "*The onset for this episode of the symptom or sign.(en)"
-          },
-          "at0153" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0153",
-            "text" : "*Specific details(en)",
-            "description" : "*Specific data elements that are additionally required to record as unique attributes of the identified symptom or sign.(en)"
-          },
-          "at0155" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0155",
-            "text" : "*Impact(en)",
-            "description" : "*Description of the impact of this symptom or sign.(en)"
-          },
-          "at0161" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0161",
-            "text" : "*Resolution date/time(en)",
-            "description" : "*The timing of the cessation of this episode of the symptom or sign.(en)"
-          },
-          "at0164" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0164",
-            "text" : "*Onset type(en)",
-            "description" : "*Description of the onset of the symptom or sign.(en)"
-          },
-          "at0165" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0165",
-            "text" : "*Precipitating factor (en)",
-            "description" : "*Details about specified factors that are associated with the precipitation of the symptom or sign. (en)",
-            "comment" : "*For example: lying down leads to heartburn; or walking up a hill leads to claudication. (en)"
-          },
-          "at0170" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0170",
-            "text" : "*Factor(en)",
-            "description" : "*Name of the health event, symptom, reported sign or other factor.(en)",
-            "comment" : "*For example: onset of another symptom; lying down; or walking up a hill. (en)"
-          },
-          "at0171" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0171",
-            "text" : "*Time interval(en)",
-            "description" : "*The interval of time between the occurrence or onset of the factor and onset of the symptom or sign. (en)"
-          },
-          "at0180" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0180",
-            "text" : "Beloop",
-            "description" : "Beloop van het symptoom op het moment van verslaglegging.",
-            "comment" : "*Occurrences of this data element are set to 0..* to allow multiple types of progression to be separated out in a template if desired - for example, severity or frequency. The Text data type is added as an option, to support other value sets than the ones included in the archetype. (en)"
-          },
-          "at0189" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0189",
-            "text" : "*Character(en)",
-            "description" : "*Word or short phrase describing the nature of the symptom or sign.(en)"
-          },
-          "at0190" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0190",
-            "text" : "*Resolving factor (en)",
-            "description" : "*Details about specified factors that are associated with the resolution of the symptom or sign. (en)",
-            "comment" : "*For example: upright posture stops heartburn; or resting stops claudication. (en)"
-          },
-          "at0193" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0193",
-            "text" : "*Factor(en)",
-            "description" : "*Name of the health event, symptom, reported sign or other factor.(en)",
-            "comment" : "*For example: upright posture; or resting. (en)"
-          },
-          "at0195" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0195",
-            "text" : "*Time interval(en)",
-            "description" : "*The interval of time between the occurrence or onset of the factor and resolution of the symptom or sign. (en)"
-          },
-          "at0198" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0198",
-            "text" : "*Severity rating (en)",
-            "description" : "*Numerical rating scale representing the overall severity of the symptom or sign. (en)",
-            "comment" : "*Symptom severity can be rated by the individual by recording a score for example from 0 (ie symptom not present) to 10 (ie symptom is as severe as the individual can imagine). (en)"
-          },
           "at0171.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0171",
@@ -5463,7 +4569,8 @@
             "text" : "Naam van het symptoom",
             "description" : "De naam van het vastgelegde symptoom"
           }
-        }
+        },
+        "ca" : { }
       },
       "termBindings" : {
         "SNOMED-CT" : {
@@ -5585,6 +4692,22 @@
       },
       "accreditation" : "MD",
       "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Manuel José Zafra Doménech",
+        "organisation" : "TRADCREA, S.L.",
+        "email" : "mzafra@tradcrea.com"
+      },
+      "otherDetails" : {
+        "other_contributors" : "Servei Català de la Salut"
+      }
     } ]
   } ],
   "originalLanguage" : {
